@@ -97,9 +97,9 @@
     --color-slate-200: #e2e8f0;
     --color-gray-100: #f3f4f6;
     --color-gray-200: #e5e7eb;
-    --color-gray-400: #99a1af;
-    --color-gray-500: #6a7282;
-    --color-gray-600: #4a5565;
+    --color-gray-400: #71717a;
+    --color-gray-500: #52525b;
+    --color-gray-600: #3f3f46;
     --color-gray-700: #364153;
     --color-black: #000;
     --color-white: #fff;
@@ -187,9 +187,9 @@
       --color-slate-200: lab(91.7353% -0.998765 -4.76968);
       --color-gray-100: lab(96.1596% -0.0823438 -1.13575);
       --color-gray-200: lab(91.6229% -0.159115 -2.26791);
-      --color-gray-400: lab(65.9269% -0.832707 -8.17473);
-      --color-gray-500: lab(47.7841% -0.393182 -10.0268);
-      --color-gray-600: lab(35.6337% -1.58697 -10.8425);
+      --color-gray-400: lab(47.7841% -0.393182 -10.0268);
+      --color-gray-500: lab(35.6337% -1.58697 -10.8425);
+      --color-gray-600: lab(27.1134% -0.956401 -12.3224);
       --color-gray-700: lab(27.1134% -0.956401 -12.3224);
     }
   }
@@ -324,7 +324,6 @@
   iframe,
   embed,
   object {
-    vertical-align: middle;
     display: block;
   }
   img,
@@ -445,7 +444,34 @@
     display: none !important;
   }
 }
-@layer components;
+@layer components {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2d5a4c;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+}
 @layer utilities {
   .visible {
     visibility: visible;
@@ -1053,7 +1079,7 @@
   }
   .bg-\[\#1a2e2a\]\/30 {
     background-color: #1a2e2a4d;
-    background-color: lab(17.1259% -9.31963 -0.113767/.3);
+    background-color: lab(17.1259% -9.31963 -0.113767/0.3);
   }
   .bg-\[\#2d5a4c\] {
     background-color: #2d5a4c;

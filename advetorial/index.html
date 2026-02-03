@@ -48,12 +48,14 @@
     />
   </head>
   <body class="antialiased">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div hidden=""><!--$--><!--/$--></div>
     <div
       class="min-h-screen text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]"
     >
       <nav
         class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-3 px-4"
+        aria-label="Main Navigation"
       >
         <div class="max-w-7xl mx-auto flex justify-between items-center">
           <a href="/" class="flex items-center gap-2"
@@ -79,7 +81,7 @@
           </div>
         </div>
       </nav>
-      <main class="max-w-7xl mx-auto px-4 py-8 md:py-12">
+      <main id="main-content" class="max-w-7xl mx-auto px-4 py-8 md:py-12">
         <div class="flex flex-col lg:flex-row gap-16 items-start">
           <article class="flex-1 max-w-3xl order-2 lg:order-1">
             <header class="mb-12">
@@ -365,7 +367,7 @@
               >
                 <img
                   src="assets/images/mental-fog-senior.jpg"
-                  alt="Senior forgetting something"
+                  alt="Senior woman looking confused as if she forgot something, illustrating brain fog"
                   class="w-full object-cover aspect-video grayscale contrast-125"
                 />
                 <div class="absolute inset-0 bg-[#1a2e2a]/30"></div>
@@ -1086,7 +1088,7 @@
                     combination of L-Theanine with caffeine significantly
                     improved attention and processing speed in cognitive tasks.
                   </p>
-                  <div class="space-y-4 pt-4 text-gray-700">
+                  <ul class="space-y-4 pt-4 text-gray-700">
                     <li class="flex items-center gap-3 font-bold text-sm">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -1172,7 +1174,7 @@
                       <!-- -->You get through the day without that “dragged
                       down” sensation. More energy and optimism.
                     </li>
-                  </div>
+                  </ul>
                   <p class="text-sm italic text-gray-500 pt-8">
                     Together, these subtle but powerful changes make life feel
                     lighter, calmer, and more manageable.
@@ -3659,6 +3661,7 @@
         <a
           href="#cta"
           class="bg-[#2d5a4c] text-white flex items-center justify-between p-6 rounded-xl border border-white/20 active:scale-95 transition-all shadow-2xl"
+          aria-label="Secure Reserved Batch - Check NeuroFuel availability"
           ><div class="flex flex-col text-left">
             <span
               class="text-[9px] uppercase font-black tracking-widest text-[#DFB277] mb-1"
