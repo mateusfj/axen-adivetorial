@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@source "..";
+
+@theme {
+  --font-playfair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+:root {
+  --background: #F9FAFB;
+  --foreground: #1a2e2a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-poppins);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins);
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d5a4c;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1a2e2a;
+}

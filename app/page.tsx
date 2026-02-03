@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import {
   CheckCircle,
@@ -19,7 +21,6 @@ import {
   Target,
   Home,
   Shield,
-  Notebook,
   Gift,
 } from "lucide-react";
 
@@ -29,14 +30,13 @@ const Navbar: React.FC = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-3 px-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#2d5a4c] rounded-[12px] flex items-center justify-center">
-            <Brain className="text-white w-5 h-5" />
-          </div>
-          <span className="font-bold text-xl tracking-tight text-[#1a2e2a]">
-            AXEN <span className="font-light">NEUROFUEL</span>
-          </span>
-        </div>
+        <a href="/" className="flex items-center gap-2">
+          <img
+            src="/images/logo.png"
+            alt="Axen Logo"
+            className="h-8 md:h-10 w-auto"
+          />
+        </a>
         <div className="hidden md:flex gap-8 items-center">
           <a
             href="#how-it-works"
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
           </a>
           <a
             href="#cta"
-            className="bg-[#2d5a4c] text-white px-6 py-2.5 rounded-[12px] text-sm font-bold hover:bg-[#1a2e2a] transition-all active:scale-95"
+            className="bg-[#2d5a4c] text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-[#1a2e2a] transition-all active:scale-95"
           >
             VERIFICAR DISPONIBILIDADE
           </a>
@@ -63,15 +63,15 @@ const Navbar: React.FC = () => {
 };
 
 const ProductSidebarCard: React.FC = () => (
-  <div className="bg-white rounded-[12px] p-6 border border-gray-200 relative group border-t-4 border-t-[#DFB277]">
-    <div className="absolute top-0 right-0 bg-[#DFB277] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-bl-[12px] z-10">
+  <div className="bg-white rounded-xl p-6 border border-gray-200 relative group border-t-4 border-t-[#DFB277]">
+    <div className="absolute top-0 right-0 bg-[#DFB277] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-bl-xl z-10">
       Mais Vendido
     </div>
-    <div className="relative overflow-hidden rounded-[12px] mb-6 aspect-square bg-[#fdfbf7]">
+    <div className="relative overflow-hidden rounded-xl mb-6 aspect-square bg-[#fdfbf7]">
       <img
-        src="https://images.unsplash.com/photo-1611073244118-ff9399818bfe?auto=format&fit=crop&q=80&w=600&h=600"
+        src="/images/product.png"
         alt="Axen NeuroFuel Jar"
-        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 p-4"
+        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 p-4"
       />
     </div>
     <div className="space-y-5">
@@ -87,18 +87,18 @@ const ProductSidebarCard: React.FC = () => (
         Protocolo NeuroRestore™
       </p>
       <div className="space-y-3">
-        <div className="flex items-center gap-3 text-xs text-[#2d5a4c] font-bold bg-[#f0f4f3] p-3 rounded-[12px] border border-[#2d5a4c]/5">
-          <Zap className="w-4 h-4 flex-shrink-0" />
+        <div className="flex items-center gap-3 text-xs text-[#2d5a4c] font-bold bg-[#f0f4f3] p-3 rounded-xl border border-[#2d5a4c]/5">
+          <Zap className="w-4 h-4 shrink-0" />
           <span>Foco Aumentado em 64%*</span>
         </div>
-        <div className="flex items-center gap-3 text-xs text-[#2d5a4c] font-bold bg-[#f0f4f3] p-3 rounded-[12px] border border-[#2d5a4c]/5">
-          <Brain className="w-4 h-4 flex-shrink-0" />
+        <div className="flex items-center gap-3 text-xs text-[#2d5a4c] font-bold bg-[#f0f4f3] p-3 rounded-xl border border-[#2d5a4c]/5">
+          <Brain className="w-4 h-4 shrink-0" />
           <span>Cognição 74% Superior*</span>
         </div>
       </div>
       <a
         href="#cta"
-        className="block text-center bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-5 rounded-[12px] transition-all text-lg uppercase tracking-tight"
+        className="block text-center bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-5 rounded-xl transition-all text-lg uppercase tracking-tight"
       >
         ADQUIRIR AGORA
       </a>
@@ -129,7 +129,7 @@ const CountdownTimer: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex gap-2 justify-center items-center font-mono text-2xl font-black text-red-600 bg-red-50 py-3 px-6 rounded-[12px] border border-red-100">
+    <div className="flex gap-2 justify-center items-center font-mono text-2xl font-black text-red-600 bg-red-50 py-3 px-6 rounded-xl border border-red-100">
       <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
       <span className="animate-pulse">:</span>
       <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
@@ -137,13 +137,17 @@ const CountdownTimer: React.FC = () => {
   );
 };
 
-// --- Main App ---
+// --- Main Page ---
 
-const App: React.FC = () => {
-  const today = new Date().toLocaleDateString("pt-BR");
+export default function Home_Page() {
+  const [today, setToday] = useState("");
+
+  useEffect(() => {
+    setToday(new Date().toLocaleDateString("pt-BR"));
+  }, []);
 
   return (
-    <div className="min-h-screen text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]">
+    <div className="min-h-screen bg-red-500 text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-4 py-8 md:py-12">
@@ -153,7 +157,7 @@ const App: React.FC = () => {
             {/* HERO HEADLINE */}
             <header className="mb-12">
               <div className="flex flex-wrap items-center gap-4 mb-8">
-                <span className="inline-flex items-center px-4 py-1.5 rounded-[12px] text-[10px] font-black uppercase tracking-[0.2em] bg-[#DFB277]/10 text-[#a8824f] border border-[#DFB277]/20">
+                <span className="inline-flex items-center px-4 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] bg-[#DFB277]/10 text-[#a8824f] border border-[#DFB277]/20">
                   <Eye className="w-3.5 h-3.5 mr-2" /> 8.547 pessoas lendo agora
                 </span>
                 <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest flex items-center">
@@ -171,13 +175,13 @@ const App: React.FC = () => {
               </h2>
 
               {/* Main Sarah Image - Hero Lifestyle Segurando Pote */}
-              <div className="relative mb-12 group overflow-hidden rounded-[12px]">
+              <div className="relative mb-12 group overflow-hidden rounded-xl">
                 <img
                   src="https://images.unsplash.com/photo-1556911229-bbd4860153f3?auto=format&fit=crop&q=80&w=1200&h=800"
                   alt="Sarah Mitchell segurando pote Axen NeuroFuel"
-                  className="w-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-1000"
+                  className="w-full object-cover aspect-4/3 group-hover:scale-105 transition-transform duration-1000"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-white">
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black/80 to-transparent text-white">
                   <p className="text-sm font-bold opacity-80 mb-2 uppercase tracking-widest italic">
                     Pesquisadora & Nutricionista
                   </p>
@@ -189,7 +193,7 @@ const App: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-5 border-t border-b border-gray-100 py-8 mb-16">
-                <div className="w-16 h-16 rounded-[12px] border-2 border-[#DFB277] overflow-hidden flex-shrink-0">
+                <div className="w-16 h-16 rounded-xl border-2 border-[#DFB277] overflow-hidden shrink-0">
                   <img
                     src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=150&h=150"
                     alt="Sarah Mitchell Portrait Bio"
@@ -238,7 +242,7 @@ const App: React.FC = () => {
                 na internet, tive a mesma reaction que você provavelmente teve:
               </p>
 
-              <div className="bg-[#fdfbf7] border-l-4 border-[#DFB277] p-8 rounded-[12px] italic text-gray-600 space-y-4 font-medium text-gray-700">
+              <div className="bg-[#fdfbf7] border-l-4 border-[#DFB277] p-8 rounded-xl italic space-y-4 font-medium text-gray-700">
                 <p>“Ah, olha só, a internet descobriu cogumelos… de novo.”</p>
                 <p>
                   “Já tentei o café de cogumelo. Cuspi na pia. Não senti nada.”
@@ -250,7 +254,7 @@ const App: React.FC = () => {
               </div>
 
               <p>Tantos produtos de bem-estar virais seguem o mesmo roteiro:</p>
-              <div className="bg-red-50 text-red-600 p-4 rounded-[12px] font-black text-center uppercase tracking-widest text-sm border border-red-100">
+              <div className="bg-red-50 text-red-600 p-4 rounded-xl font-black text-center uppercase tracking-widest text-sm border border-red-100">
                 Promessas Enormes → Dose Mínima → Rótulo Bonito → Zero
                 Resultados
               </div>
@@ -276,7 +280,7 @@ const App: React.FC = () => {
               </p>
 
               {/* CLINICAL TABLE */}
-              <div className="my-16 bg-white rounded-[12px] border border-gray-200 overflow-hidden">
+              <div className="my-16 bg-white rounded-xl border border-gray-200 overflow-hidden">
                 <div className="bg-[#2d5a4c] p-8 text-white">
                   <h4 className="text-2xl font-black italic text-[#DFB277]">
                     Resultados Clínicos Comprovados
@@ -356,13 +360,13 @@ const App: React.FC = () => {
               </p>
 
               <div className="grid md:grid-cols-1 gap-4 text-gray-700">
-                <div className="bg-slate-50 p-6 rounded-[12px] italic text-sm border-l-4 border-[#2d5a4c] border border-slate-200">
+                <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
                   “Os resultados foram mais fortes do que eu esperava.”
                 </div>
-                <div className="bg-slate-50 p-6 rounded-[12px] italic text-sm border-l-4 border-[#2d5a4c] border border-slate-200">
+                <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
                   “Superou todos os suplementos ‘sérios’ que testei este ano.”
                 </div>
-                <div className="bg-slate-50 p-6 rounded-[12px] italic text-sm border-l-4 border-[#2d5a4c] border border-slate-200">
+                <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
                   “Era a última coisa que eu achava que ajudaria meus clientes…
                   e ajudou.”
                 </div>
@@ -373,7 +377,7 @@ const App: React.FC = () => {
                 O Lapso Mental Que Me Fez Desmoronar
               </h3>
 
-              <div className="relative rounded-[12px] overflow-hidden mb-12 border-4 border-white">
+              <div className="relative rounded-xl overflow-hidden mb-12 border-4 border-white">
                 <img
                   src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200&h=600"
                   alt="Senior forgetting something"
@@ -447,7 +451,7 @@ const App: React.FC = () => {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 my-12 text-gray-700">
-                <div className="bg-white border border-gray-100 p-8 rounded-[12px] hover:bg-slate-50 transition-colors">
+                <div className="bg-white border border-gray-100 p-8 rounded-xl hover:bg-slate-50 transition-colors">
                   <Target className="text-[#2d5a4c] w-10 h-10 mb-4" />
                   <h4 className="font-black text-lg mb-3 uppercase tracking-wide">
                     O Foco Escapa
@@ -458,7 +462,7 @@ const App: React.FC = () => {
                     seu cérebro divaga no matter how hard you try.
                   </p>
                 </div>
-                <div className="bg-white border border-gray-100 p-8 rounded-[12px] hover:bg-slate-50 transition-colors">
+                <div className="bg-white border border-gray-100 p-8 rounded-xl hover:bg-slate-50 transition-colors">
                   <Heart className="text-red-400 w-10 h-10 mb-4" />
                   <h4 className="font-black text-lg mb-3 uppercase tracking-wide">
                     Relacionamentos
@@ -469,7 +473,7 @@ const App: React.FC = () => {
                     esquece de responder uma mensagem.
                   </p>
                 </div>
-                <div className="bg-white border border-gray-100 p-8 rounded-[12px] hover:bg-slate-50 transition-colors">
+                <div className="bg-white border border-gray-100 p-8 rounded-xl hover:bg-slate-50 transition-colors">
                   <Brain className="text-[#DFB277] w-10 h-10 mb-4" />
                   <h4 className="font-black text-lg mb-3 uppercase tracking-wide">
                     Lapsos de Memória
@@ -480,7 +484,7 @@ const App: React.FC = () => {
                     aquele olhar de preocupação.
                   </p>
                 </div>
-                <div className="bg-white border border-gray-100 p-8 rounded-[12px] hover:bg-slate-50 transition-colors">
+                <div className="bg-white border border-gray-100 p-8 rounded-xl hover:bg-slate-50 transition-colors">
                   <Home className="text-blue-400 w-10 h-10 mb-4" />
                   <h4 className="font-black text-lg mb-3 uppercase tracking-wide">
                     Vida Social
@@ -516,7 +520,7 @@ const App: React.FC = () => {
                   dos sinais biológicos que permitem ao cérebro se reparar.
                 </p>
 
-                <div className="bg-[#f0f4f3] p-8 rounded-[12px] border border-[#2d5a4c]/10 italic">
+                <div className="bg-[#f0f4f3] p-8 rounded-xl border border-[#2d5a4c]/10 italic">
                   "Pense nisso como um celular com bateria baixa. A tela fica
                   menos brilhante, os processos em segundo plano são desligados…
                   tudo funciona, só que mais devagar. O cérebro faz exatamente a
@@ -538,15 +542,15 @@ const App: React.FC = () => {
                 <p>O NGF é o sinal biológico responsável por:</p>
                 <ul className="space-y-3 font-medium text-gray-700">
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="text-green-500 w-5 h-5 flex-shrink-0" />{" "}
+                    <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />{" "}
                     Manter neurônios vivos
                   </li>
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="text-green-500 w-5 h-5 flex-shrink-0" />{" "}
+                    <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />{" "}
                     Preservar conexões neurais
                   </li>
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="text-green-500 w-5 h-5 flex-shrink-0" />{" "}
+                    <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />{" "}
                     Permitir que o cérebro forme novas sinapses
                   </li>
                 </ul>
@@ -566,32 +570,32 @@ const App: React.FC = () => {
                   system entendeu que não é seguro investir em desempenho.
                 </p>
 
-                <div className="bg-slate-50 p-10 rounded-[12px] border border-slate-200 my-12">
+                <div className="bg-slate-50 p-10 rounded-xl border border-slate-200 my-12">
                   <h4 className="text-xl font-black text-[#1a2e2a] mb-6 uppercase tracking-wider">
                     A Fadiga Neural Se Acumula Quando:
                   </h4>
                   <div className="space-y-4 text-gray-700">
                     <div className="flex items-start gap-4">
-                      <XCircle className="text-red-500 w-6 h-6 flex-shrink-0" />
+                      <XCircle className="text-red-500 w-6 h-6 shrink-0" />
                       <span className="text-sm font-bold leading-relaxed">
                         Hormônios do estresse ficam elevados o dia todo
                       </span>
                     </div>
                     <div className="flex items-start gap-4">
-                      <XCircle className="text-red-500 w-6 h-6 flex-shrink-0" />
+                      <XCircle className="text-red-500 w-6 h-6 shrink-0" />
                       <span className="text-sm font-bold leading-relaxed">
                         Tarefas inacabadas zumbem no fundo da mente
                       </span>
                     </div>
                     <div className="flex items-start gap-4">
-                      <XCircle className="text-red-500 w-6 h-6 flex-shrink-0" />
+                      <XCircle className="text-red-500 w-6 h-6 shrink-0" />
                       <span className="text-sm font-bold leading-relaxed">
                         Seu intestino e system imunológico enviam sinais
                         “errados”
                       </span>
                     </div>
                     <div className="flex items-start gap-4">
-                      <XCircle className="text-red-500 w-6 h-6 flex-shrink-0" />
+                      <XCircle className="text-red-500 w-6 h-6 shrink-0" />
                       <span className="text-sm font-bold leading-relaxed">
                         Dispositivos digitais puxam seu cérebro para fora do
                         foco
@@ -619,7 +623,7 @@ const App: React.FC = () => {
                 Ok… Como Eu Elimino Essa “Fadiga Neural”?
               </h3>
 
-              <div className="my-8 rounded-[12px] overflow-hidden border border-gray-100">
+              <div className="my-8 rounded-xl overflow-hidden border border-gray-100">
                 <img
                   src="https://assets.replocdn.com/projects/1e5bc658-d2dd-4185-9134-f9e01d19734f/1e6f6e9e-aeb4-4952-a1a2-83d36811f8e5?width=1024"
                   alt="NeuroRestore System Diagram"
@@ -634,13 +638,13 @@ const App: React.FC = () => {
                   ele precisa para otimizar:
                 </p>
                 <ul className="grid grid-cols-1 md:grid-cols-3 gap-3 font-bold text-xs uppercase tracking-widest text-[#2d5a4c]">
-                  <li className="bg-[#f0f4f3] p-4 rounded-[12px] text-center border border-[#2d5a4c]/10">
+                  <li className="bg-[#f0f4f3] p-4 rounded-xl text-center border border-[#2d5a4c]/10">
                     Química do Estresse
                   </li>
-                  <li className="bg-[#f0f4f3] p-4 rounded-[12px] text-center border border-[#2d5a4c]/10">
+                  <li className="bg-[#f0f4f3] p-4 rounded-xl text-center border border-[#2d5a4c]/10">
                     Sinais de Crescimento Neural
                   </li>
-                  <li className="bg-[#f0f4f3] p-4 rounded-[12px] text-center border border-[#2d5a4c]/10">
+                  <li className="bg-[#f0f4f3] p-4 rounded-xl text-center border border-[#2d5a4c]/10">
                     Conexão Intestino-Cérebro
                   </li>
                 </ul>
@@ -651,7 +655,7 @@ const App: React.FC = () => {
               </div>
 
               {/* APRESENTANDO SECTION */}
-              <div className="bg-[#fdfbf7] p-10 rounded-[12px] border-2 border-[#DFB277]/20 relative overflow-hidden my-16 text-gray-700">
+              <div className="bg-[#fdfbf7] p-10 rounded-xl border-2 border-[#DFB277]/20 relative overflow-hidden my-16 text-gray-700">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#DFB277] mb-6">
                   APRESENTANDO
                 </h4>
@@ -664,9 +668,9 @@ const App: React.FC = () => {
                   ritual diário simples.
                 </p>
                 <img
-                  src="https://images.unsplash.com/photo-1611073244118-ff9399818bfe?auto=format&fit=crop&q=80&w=800&h=800"
+                  src="/images/product.png"
                   alt="Pote do Axen NeuroFuel com o pó ao redor"
-                  className="w-full rounded-[12px] mb-10 border border-gray-100"
+                  className="w-full rounded-xl mb-10 border border-gray-100 object-contain"
                 />
               </div>
 
@@ -694,24 +698,24 @@ const App: React.FC = () => {
                     comparados ao grupo placebo.
                   </p>
                   <div className="space-y-3 mt-6">
-                    <div className="flex gap-4 bg-white p-6 rounded-[12px] border border-gray-200 font-bold text-sm leading-relaxed">
-                      <CheckCircle className="text-[#DFB277] w-5 h-5 flex-shrink-0" />
+                    <div className="flex gap-4 bg-white p-6 rounded-xl border border-gray-200 font-bold text-sm leading-relaxed">
+                      <CheckCircle className="text-[#DFB277] w-5 h-5 shrink-0" />
                       <span>
                         A memória do dia a dia fica nítida — Chega de perder o
                         fio do pensamento no meio da frase, esquecer
                         compromissos ou dar branco em fatos simples.
                       </span>
                     </div>
-                    <div className="flex gap-4 bg-white p-6 rounded-[12px] border border-gray-200 font-bold text-sm leading-relaxed">
-                      <CheckCircle className="text-[#DFB277] w-5 h-5 flex-shrink-0" />
+                    <div className="flex gap-4 bg-white p-6 rounded-xl border border-gray-200 font-bold text-sm leading-relaxed">
+                      <CheckCircle className="text-[#DFB277] w-5 h-5 shrink-0" />
                       <span>
                         Você consegue fazer as coisas — Você vai de email →
                         reunião → lista de tarefas sem se perder, travar ou
                         esquecer o que estava fazendo.
                       </span>
                     </div>
-                    <div className="flex gap-4 bg-white p-6 rounded-[12px] border border-gray-200 font-bold text-sm leading-relaxed">
-                      <CheckCircle className="text-[#DFB277] w-5 h-5 flex-shrink-0" />
+                    <div className="flex gap-4 bg-white p-6 rounded-xl border border-gray-200 font-bold text-sm leading-relaxed">
+                      <CheckCircle className="text-[#DFB277] w-5 h-5 shrink-0" />
                       <span>
                         Seu foco permanece estável — Para você não estar afiado
                         de manhã e embaralhado ao meio-dia.
@@ -745,9 +749,9 @@ const App: React.FC = () => {
                     tarefas, você se sente estável, calmo e mentalmente
                     presente.
                   </p>
-                  <div className="bg-slate-50 p-8 rounded-[12px] space-y-6 text-sm text-gray-700 border border-slate-200">
+                  <div className="bg-slate-50 p-8 rounded-xl space-y-6 text-sm text-gray-700 border border-slate-200">
                     <p className="flex items-start gap-4">
-                      <CheckCircle className="text-[#2d5a4c] w-5 h-5 flex-shrink-0" />
+                      <CheckCircle className="text-[#2d5a4c] w-5 h-5 shrink-0" />
                       <span>
                         <strong>
                           “Sua paciência volta, mesmo em dias caóticos.”
@@ -757,7 +761,7 @@ const App: React.FC = () => {
                       </span>
                     </p>
                     <p className="flex items-start gap-4">
-                      <CheckCircle className="text-[#2d5a4c] w-5 h-5 flex-shrink-0" />
+                      <CheckCircle className="text-[#2d5a4c] w-5 h-5 shrink-0" />
                       <span>
                         <strong>
                           “Você não pula a cada interrupção — permanece composto
@@ -767,7 +771,7 @@ const App: React.FC = () => {
                       </span>
                     </p>
                     <p className="flex items-start gap-4">
-                      <CheckCircle className="text-[#2d5a4c] w-5 h-5 flex-shrink-0" />
+                      <CheckCircle className="text-[#2d5a4c] w-5 h-5 shrink-0" />
                       <span>
                         <strong>
                           “Aquela faxina que você estava adiando? Feita em uma
@@ -822,7 +826,7 @@ const App: React.FC = () => {
                         key={i}
                         className="flex items-center gap-3 font-bold text-sm"
                       >
-                        <Zap className="w-5 h-5 text-emerald-500 flex-shrink-0" />{" "}
+                        <Zap className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                         {txt}
                       </li>
                     ))}
@@ -835,7 +839,7 @@ const App: React.FC = () => {
               </div>
 
               {/* WHY OTHERS FAIL */}
-              <div className="my-24 bg-[#1a2e2a] text-white p-12 rounded-[12px] relative overflow-hidden">
+              <div className="my-24 bg-[#1a2e2a] text-white p-12 rounded-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 opacity-10">
                   <AlertTriangle className="w-24 h-24" />
                 </div>
@@ -860,19 +864,19 @@ const App: React.FC = () => {
                     </h4>
                     <ul className="space-y-4 text-xs font-bold">
                       <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />{" "}
+                        <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
                         Dose clínica por porção
                       </li>
                       <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />{" "}
+                        <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
                         6 ingredientes sinérgicos
                       </li>
                       <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />{" "}
+                        <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
                         Extratos de corpo frutífero
                       </li>
                       <li className="flex gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />{" "}
+                        <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
                         Formas ativas de vitaminas
                       </li>
                     </ul>
@@ -892,8 +896,8 @@ const App: React.FC = () => {
 
               <div className="space-y-6 my-12 text-gray-700">
                 {/* FRENTE 1 */}
-                <div className="bg-[#fdfbf7] p-8 rounded-[12px] border border-[#DFB277]/20 flex flex-col md:flex-row gap-6">
-                  <div className="w-16 h-16 bg-[#DFB277]/10 rounded-[12px] flex items-center justify-center flex-shrink-0">
+                <div className="bg-[#fdfbf7] p-8 rounded-xl border border-[#DFB277]/20 flex flex-col md:flex-row gap-6">
+                  <div className="w-16 h-16 bg-[#DFB277]/10 rounded-xl flex items-center justify-center shrink-0">
                     <Brain className="w-8 h-8 text-[#DFB277]" />
                   </div>
                   <div className="space-y-4">
@@ -916,8 +920,8 @@ const App: React.FC = () => {
                 </div>
 
                 {/* FRENTE 2 */}
-                <div className="bg-[#f0f4f3] p-8 rounded-[12px] border border-[#2d5a4c]/10 flex flex-col md:flex-row gap-6">
-                  <div className="w-16 h-16 bg-[#2d5a4c]/10 rounded-[12px] flex items-center justify-center flex-shrink-0">
+                <div className="bg-[#f0f4f3] p-8 rounded-xl border border-[#2d5a4c]/10 flex flex-col md:flex-row gap-6">
+                  <div className="w-16 h-16 bg-[#2d5a4c]/10 rounded-xl flex items-center justify-center shrink-0">
                     <Shield className="w-8 h-8 text-[#2d5a4c]" />
                   </div>
                   <div className="space-y-4">
@@ -939,8 +943,8 @@ const App: React.FC = () => {
                 </div>
 
                 {/* FRENTE 3 */}
-                <div className="bg-slate-50 p-8 rounded-[12px] border border-gray-200 flex flex-col md:flex-row gap-6">
-                  <div className="w-16 h-16 bg-emerald-50 rounded-[12px] flex items-center justify-center flex-shrink-0">
+                <div className="bg-slate-50 p-8 rounded-xl border border-gray-200 flex flex-col md:flex-row gap-6">
+                  <div className="w-16 h-16 bg-emerald-50 rounded-xl flex items-center justify-center shrink-0">
                     <Zap className="w-8 h-8 text-emerald-500" />
                   </div>
                   <div className="space-y-4">
@@ -965,7 +969,7 @@ const App: React.FC = () => {
               </div>
 
               {/* FINAL SUMMARY RECAP */}
-              <div className="bg-[#1a2e2a] text-white p-10 rounded-[12px] space-y-6">
+              <div className="bg-[#1a2e2a] text-white p-10 rounded-xl space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm italic font-medium opacity-90 leading-relaxed">
                   <p>Signal™ reativa os fatores de crescimento neural.</p>
                   <p>Shield™ protege contra a corrosão do estresse moderno.</p>
@@ -995,7 +999,7 @@ const App: React.FC = () => {
 
               <div className="space-y-10 my-12 text-gray-700">
                 {/* WEEK 1 CARD */}
-                <div className="bg-white rounded-[12px] border border-gray-200 overflow-hidden">
+                <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
                   <div className="bg-[#f0f4f3] px-8 py-4 border-b border-gray-100 flex justify-between items-center">
                     <h4 className="font-black text-[#2d5a4c] uppercase tracking-[0.2em] text-[10px]">
                       DIÁRIO DE CAMPO
@@ -1015,19 +1019,19 @@ const App: React.FC = () => {
                       ruído diminui.
                     </p>
                     <ul className="space-y-3">
-                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-[12px] border border-slate-100">
-                        <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
                           Não estou mais pulando entre abas como um esquilo
                           cafeinado
                         </span>
                       </li>
-                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-[12px] border border-slate-100">
-                        <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>Acidentalmente pulo meu café da tarde</span>
                       </li>
-                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-[12px] border border-slate-100">
-                        <CheckCircle className="text-emerald-500 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
                           Consigo passar pela caixa de entrada sem me desligar
                           mentalmente
@@ -1038,7 +1042,7 @@ const App: React.FC = () => {
                 </div>
 
                 {/* WEEK 2 CARD */}
-                <div className="bg-white rounded-[12px] border border-gray-200 overflow-hidden">
+                <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
                   <div className="bg-blue-50/50 px-8 py-4 border-b border-gray-100 flex justify-between items-center">
                     <h4 className="font-black text-blue-600 uppercase tracking-[0.2em] text-[10px]">
                       CONEXÕES REATIVADAS
@@ -1057,21 +1061,21 @@ const App: React.FC = () => {
                       transições mais suaves e menos fadiga mental.
                     </p>
                     <ul className="space-y-3">
-                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-[12px] border border-slate-100">
-                        <CheckCircle className="text-blue-500 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <CheckCircle className="text-blue-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
                           Reorganizo aquele armário que estava evitando há
                           semanas
                         </span>
                       </li>
-                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-[12px] border border-slate-100">
-                        <CheckCircle className="text-blue-500 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <CheckCircle className="text-blue-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
                           Menos momentos de “espera… o que eu estava dizendo?”
                         </span>
                       </li>
-                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-[12px] border border-slate-100">
-                        <CheckCircle className="text-blue-500 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <CheckCircle className="text-blue-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
                           Realmente flui de uma tarefa para outra — sem travar
                         </span>
@@ -1081,7 +1085,7 @@ const App: React.FC = () => {
                 </div>
 
                 {/* WEEK 3-4 CARD */}
-                <div className="bg-white rounded-[12px] border border-gray-200 overflow-hidden border-t-4 border-t-[#DFB277]">
+                <div className="bg-white rounded-xl border border-gray-200 overflow-hidden border-t-4 border-t-[#DFB277]">
                   <div className="bg-[#fdfbf7] px-8 py-4 border-b border-gray-100 flex justify-between items-center">
                     <h4 className="font-black text-[#a8824f] uppercase tracking-[0.2em] text-[10px]">
                       O REBOOT FINAL
@@ -1100,7 +1104,7 @@ const App: React.FC = () => {
                     </p>
                     <ul className="space-y-4">
                       <li className="flex items-center gap-4 group">
-                        <div className="w-10 h-10 bg-[#DFB277]/10 rounded-[12px] flex items-center justify-center flex-shrink-0 group-hover:bg-[#DFB277]/20 transition-colors">
+                        <div className="w-10 h-10 bg-[#DFB277]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#DFB277]/20 transition-colors">
                           <Heart className="w-5 h-5 text-[#DFB277]" />
                         </div>
                         <p className="text-sm font-bold italic">
@@ -1109,7 +1113,7 @@ const App: React.FC = () => {
                         </p>
                       </li>
                       <li className="flex items-center gap-4 group">
-                        <div className="w-10 h-10 bg-[#DFB277]/10 rounded-[12px] flex items-center justify-center flex-shrink-0 group-hover:bg-[#DFB277]/20 transition-colors">
+                        <div className="w-10 h-10 bg-[#DFB277]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#DFB277]/20 transition-colors">
                           <Quote className="w-5 h-5 text-[#DFB277]" />
                         </div>
                         <p className="text-sm font-bold italic">
@@ -1118,7 +1122,7 @@ const App: React.FC = () => {
                         </p>
                       </li>
                     </ul>
-                    <p className="text-center py-6 bg-slate-50 rounded-[12px] border border-slate-100 text-lg font-black text-[#1a2e2a] italic">
+                    <p className="text-center py-6 bg-slate-50 rounded-xl border border-slate-100 text-lg font-black text-[#1a2e2a] italic">
                       "Não é um transplante de personalidade. Sou só eu, mas
                       mais clara."
                     </p>
@@ -1167,7 +1171,7 @@ const App: React.FC = () => {
                   ].map((rev, i) => (
                     <div
                       key={i}
-                      className="bg-white p-8 rounded-[12px] border border-gray-200"
+                      className="bg-white p-8 rounded-xl border border-gray-200"
                     >
                       <div className="flex text-[#DFB277] mb-4">
                         {[...Array(5)].map((_, i) => (
@@ -1186,8 +1190,8 @@ const App: React.FC = () => {
                             </span>
                           )}
                         </p>
-                        <div className="flex items-center gap-1.5 text-[10px] text-green-600 font-black uppercase tracking-[0.2em] bg-green-50 px-3 py-1 rounded-[12px] border border-green-100 self-start md:self-auto">
-                          <div className="bg-green-600 p-0.5 rounded-[12px]">
+                        <div className="flex items-center gap-1.5 text-[10px] text-green-600 font-black uppercase tracking-[0.2em] bg-green-50 px-3 py-1 rounded-xl border border-green-100 self-start md:self-auto">
+                          <div className="bg-green-600 p-0.5 rounded-xl">
                             <CheckCircle className="w-2.5 h-2.5 text-white" />
                           </div>
                           Cliente Verificado
@@ -1199,7 +1203,7 @@ const App: React.FC = () => {
               </div>
 
               {/* WHAT YOU GET */}
-              <div className="my-24 bg-white p-12 rounded-[12px] border border-gray-200 text-gray-700">
+              <div className="my-24 bg-white p-12 rounded-xl border border-gray-200 text-gray-700">
                 <h3 className="text-2xl font-black mb-2 italic uppercase tracking-tighter">
                   O Que Você Está Realmente Recebendo
                 </h3>
@@ -1216,9 +1220,9 @@ const App: React.FC = () => {
                   ].map((it, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-4 bg-slate-50 p-6 rounded-[12px] border border-slate-200 font-bold"
+                      className="flex items-center gap-4 bg-slate-50 p-6 rounded-xl border border-slate-200 font-bold"
                     >
-                      <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />{" "}
+                      <CheckCircle className="w-6 h-6 text-green-500 shrink-0" />{" "}
                       {it}
                     </div>
                   ))}
@@ -1234,8 +1238,8 @@ const App: React.FC = () => {
               </p>
               <div className="grid md:grid-cols-1 gap-8 my-12 text-gray-700">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-4 bg-white p-8 rounded-[12px] border border-gray-100">
-                    <div className="w-12 h-12 bg-[#2d5a4c] text-white rounded-[12px] flex items-center justify-center font-black">
+                  <div className="space-y-4 bg-white p-8 rounded-xl border border-gray-100">
+                    <div className="w-12 h-12 bg-[#2d5a4c] text-white rounded-xl flex items-center justify-center font-black">
                       1
                     </div>
                     <h4 className="font-black text-lg">
@@ -1245,8 +1249,8 @@ const App: React.FC = () => {
                       De preferência com o café da manhã. Simples assim.
                     </p>
                   </div>
-                  <div className="space-y-4 bg-white p-8 rounded-[12px] border border-gray-100">
-                    <div className="w-12 h-12 bg-[#2d5a4c] text-white rounded-[12px] flex items-center justify-center font-black">
+                  <div className="space-y-4 bg-white p-8 rounded-xl border border-gray-100">
+                    <div className="w-12 h-12 bg-[#2d5a4c] text-white rounded-xl flex items-center justify-center font-black">
                       2
                     </div>
                     <h4 className="font-black text-lg">
@@ -1257,8 +1261,8 @@ const App: React.FC = () => {
                       lugar que sua rotina te leve.
                     </p>
                   </div>
-                  <div className="space-y-4 bg-white p-8 rounded-[12px] border border-gray-100">
-                    <div className="w-12 h-12 bg-[#2d5a4c] text-white rounded-[12px] flex items-center justify-center font-black">
+                  <div className="space-y-4 bg-white p-8 rounded-xl border border-gray-100">
+                    <div className="w-12 h-12 bg-[#2d5a4c] text-white rounded-xl flex items-center justify-center font-black">
                       3
                     </div>
                     <h4 className="font-black text-lg">
@@ -1269,9 +1273,9 @@ const App: React.FC = () => {
                       volta da Semana 2–4.
                     </p>
                   </div>
-                  <div className="space-y-6 bg-[#f0f4f3] p-8 rounded-[12px] border border-[#2d5a4c]/10">
+                  <div className="space-y-6 bg-[#f0f4f3] p-8 rounded-xl border border-[#2d5a4c]/10">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-[#2d5a4c] text-white rounded-[12px] flex items-center justify-center font-black">
+                      <div className="w-12 h-12 bg-[#2d5a4c] text-white rounded-xl flex items-center justify-center font-black">
                         4
                       </div>
                       <h4 className="font-black text-lg">
@@ -1290,7 +1294,7 @@ const App: React.FC = () => {
                           key={i}
                           className="flex items-center gap-3 text-xs font-bold text-gray-700"
                         >
-                          <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />{" "}
+                          <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
                           {gain}
                         </li>
                       ))}
@@ -1300,7 +1304,7 @@ const App: React.FC = () => {
               </div>
 
               {/* VERDICT SECTION */}
-              <div className="my-24 py-20 px-10 bg-[#fdfbf7] rounded-[12px] border-2 border-[#DFB277]/10 text-center">
+              <div className="my-24 py-20 px-10 bg-[#fdfbf7] rounded-xl border-2 border-[#DFB277]/10 text-center">
                 <h3 className="text-4xl font-black mb-8 italic text-[#1a2e2a]">
                   O Veredicto
                 </h3>
@@ -1318,7 +1322,7 @@ const App: React.FC = () => {
                   <p>A mudança foi real.</p>
                 </div>
 
-                <div className="bg-white p-12 rounded-[12px] inline-block border border-gray-200 shadow-xl shadow-black/5">
+                <div className="bg-white p-12 rounded-xl inline-block border border-gray-200 shadow-xl shadow-black/5">
                   <div className="flex justify-center text-[#DFB277] mb-4 gap-1">
                     <Star className="w-8 h-8 fill-current" />
                     <Star className="w-8 h-8 fill-current" />
@@ -1339,7 +1343,7 @@ const App: React.FC = () => {
                   Problemas de disponibilidade."
                 </p>
 
-                <div className="mt-12 bg-[#1a2e2a] text-white p-10 rounded-[12px] text-left relative overflow-hidden">
+                <div className="mt-12 bg-[#1a2e2a] text-white p-10 rounded-xl text-left relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-8 opacity-5">
                     <Brain className="w-24 h-24" />
                   </div>
@@ -1360,7 +1364,7 @@ const App: React.FC = () => {
               </div>
 
               {/* STOCK WARNING SECTION */}
-              <div className="my-16 bg-red-50 border border-red-100 p-12 rounded-[12px] relative overflow-hidden text-gray-700">
+              <div className="my-16 bg-red-50 border border-red-100 p-12 rounded-xl relative overflow-hidden text-gray-700">
                 <div className="absolute top-0 right-0 p-8 opacity-10">
                   <AlertTriangle className="w-20 h-20 text-red-600" />
                 </div>
@@ -1373,7 +1377,7 @@ const App: React.FC = () => {
                     Enquanto finalizava este artigo, recebi uma mensagem de
                     alguém da equipe Axen:
                   </p>
-                  <blockquote className="bg-white/50 p-8 rounded-[12px] border-l-4 border-red-400 text-red-800 font-bold">
+                  <blockquote className="bg-white/50 p-8 rounded-xl border-l-4 border-red-400 text-red-800 font-bold">
                     “Nossa última promoção esgotou a maior parte do nosso
                     estoque. Reservamos um pequeno lote apenas para seus
                     leitores — mas uma vez que esses acabarem, não podemos
@@ -1403,7 +1407,7 @@ const App: React.FC = () => {
                   ].map((cond, i) => (
                     <div
                       key={i}
-                      className="bg-slate-50 p-6 rounded-[12px] border border-slate-100 text-xs font-bold text-center italic"
+                      className="bg-slate-50 p-6 rounded-xl border border-slate-100 text-xs font-bold text-center italic"
                     >
                       {cond}
                     </div>
@@ -1414,7 +1418,7 @@ const App: React.FC = () => {
                   <strong>suporte@axen.com</strong> dentro de 30 dias e
                   solicitar reembolso.
                 </p>
-                <div className="bg-[#f0f4f3] p-10 rounded-[12px] border border-[#2d5a4c]/10 text-center">
+                <div className="bg-[#f0f4f3] p-10 rounded-xl border border-[#2d5a4c]/10 text-center">
                   <p className="text-xl font-black text-[#2d5a4c] italic mb-6">
                     Sem obstáculos. Sem formulários complicados. Sem perguntas.
                   </p>
@@ -1429,11 +1433,11 @@ const App: React.FC = () => {
           </article>
 
           {/* SIDEBAR (Right Sticky) */}
-          <aside className="w-full lg:w-[380px] lg:sticky lg:top-28 z-40 order-1 lg:order-2">
+          <aside className="w-full lg:w-95 lg:sticky lg:top-28 z-40 order-1 lg:order-2">
             <ProductSidebarCard />
 
             {/* STOCK WARNING (Right Sidebar) */}
-            <div className="mt-8 hidden lg:block bg-red-50 rounded-[12px] p-8 border border-red-100 relative overflow-hidden text-gray-700">
+            <div className="mt-8 hidden lg:block bg-red-50 rounded-xl p-8 border border-red-100 relative overflow-hidden text-gray-700">
               <div className="absolute top-0 right-0 p-4 opacity-10">
                 <AlertTriangle className="w-12 h-12 text-red-600" />
               </div>
@@ -1448,7 +1452,7 @@ const App: React.FC = () => {
                 Reservamos um pequeno lote apenas para seus leitores.”
               </p>
               <div className="flex items-center gap-3 text-red-600 font-black text-[10px] uppercase tracking-widest">
-                <div className="w-2 h-2 rounded-[12px] bg-red-600 animate-ping"></div>
+                <div className="w-2 h-2 rounded-xl bg-red-600 animate-ping"></div>
                 Lote Limitado Disponível
               </div>
             </div>
@@ -1459,7 +1463,7 @@ const App: React.FC = () => {
       {/* FINAL OFFER SECTION */}
       <section id="cta" className="bg-[#1a2e2a] py-32 px-4 text-white">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-block bg-[#DFB277] text-[#1a2e2a] px-8 py-3 rounded-[12px] font-black text-xs uppercase tracking-[0.4em] mb-12">
+          <div className="inline-block bg-[#DFB277] text-[#1a2e2a] px-8 py-3 rounded-xl font-black text-xs uppercase tracking-[0.4em] mb-12">
             Seu Próximo Passo
           </div>
 
@@ -1474,17 +1478,17 @@ const App: React.FC = () => {
             dia? Quanto mais você conseguiria fazer com esse suporte?
           </p>
 
-          <div className="bg-white text-[#1a2e2a] rounded-[12px] p-10 md:p-20 relative overflow-hidden text-left">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#DFB277]/10 rounded-[12px] blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+          <div className="bg-white text-[#1a2e2a] rounded-xl p-10 md:p-20 relative overflow-hidden text-left">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#DFB277]/10 rounded-xl blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
 
             <div className="flex flex-col lg:flex-row gap-20 items-center">
               <div className="w-full lg:w-1/2">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-[#2d5a4c]/10 blur-3xl rounded-[12px]"></div>
+                  <div className="absolute inset-0 bg-[#2d5a4c]/10 blur-3xl rounded-xl"></div>
                   <img
-                    src="https://images.unsplash.com/photo-1611073244118-ff9399818bfe?auto=format&fit=crop&q=80&w=800&h=800"
+                    src="/images/product.png"
                     alt="Final Product Presentation"
-                    className="w-full rounded-[12px] relative z-10 transition-transform duration-700 hover:scale-[1.02]"
+                    className="w-full rounded-xl relative z-10 transition-transform duration-700 hover:scale-[1.02] object-contain"
                   />
                 </div>
               </div>
@@ -1524,8 +1528,8 @@ const App: React.FC = () => {
                   ))}
                 </div>
 
-                <div className="bg-[#fdfbf7] p-10 rounded-[12px] border-2 border-[#DFB277]/20 relative">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#DFB277] text-white px-6 py-1.5 rounded-[12px] text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
+                <div className="bg-[#fdfbf7] p-10 rounded-xl border-2 border-[#DFB277]/20 relative">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#DFB277] text-white px-6 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
                     🔥 Oferta Por Tempo Limitado
                   </div>
                   <div className="flex items-baseline gap-4 mb-10 mt-4 justify-center">
@@ -1536,7 +1540,7 @@ const App: React.FC = () => {
                       / pote
                     </span>
                   </div>
-                  <button className="w-full bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-7 rounded-[12px] text-xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95 group uppercase tracking-tight">
+                  <button className="w-full bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-7 rounded-xl text-xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95 group uppercase tracking-tight">
                     <span>VERIFICAR DISPONIBILIDADE</span>
                     <span className="text-[10px] opacity-60 font-black">
                       Verificar estoque agora →
@@ -1573,7 +1577,7 @@ const App: React.FC = () => {
 
           {/* GUARANTEE BOX */}
           <div className="mt-32 max-w-3xl mx-auto">
-            <div className="bg-white/5 border border-white/10 p-16 rounded-[12px] backdrop-blur-xl relative overflow-hidden group">
+            <div className="bg-white/5 border border-white/10 p-16 rounded-xl backdrop-blur-xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
                 <ShieldCheck className="w-40 h-40 text-[#DFB277]" />
               </div>
@@ -1601,12 +1605,11 @@ const App: React.FC = () => {
       <footer className="bg-[#111] text-white/30 py-24 px-4 text-center">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="flex items-center justify-center gap-3">
-            <div className="w-12 h-12 bg-[#DFB277] rounded-[12px] flex items-center justify-center text-[#111]">
-              <Brain className="w-7 h-7" />
-            </div>
-            <span className="font-bold text-3xl tracking-tight text-white italic">
-              AXEN <span className="font-light">NEUROFUEL</span>
-            </span>
+            <img
+              src="/images/logo.png"
+              alt="Axen Logo"
+              className="h-12 md:h-14 w-auto brightness-0 invert"
+            />
           </div>
 
           <div className="flex flex-wrap justify-center gap-12 text-[10px] font-black uppercase tracking-[0.4em]">
@@ -1642,7 +1645,7 @@ const App: React.FC = () => {
       <div className="md:hidden fixed bottom-8 left-8 right-8 z-50">
         <a
           href="#cta"
-          className="bg-[#2d5a4c] text-white flex items-center justify-between p-6 rounded-[12px] border border-white/20 active:scale-95 transition-all shadow-2xl"
+          className="bg-[#2d5a4c] text-white flex items-center justify-between p-6 rounded-xl border border-white/20 active:scale-95 transition-all shadow-2xl"
         >
           <div className="flex flex-col text-left">
             <span className="text-[9px] uppercase font-black tracking-widest text-[#DFB277] mb-1">
@@ -1657,6 +1660,4 @@ const App: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default App;
+}
