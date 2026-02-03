@@ -42,19 +42,19 @@ const Navbar: React.FC = () => {
             href="#how-it-works"
             className="text-sm font-semibold hover:text-[#DFB277] transition-colors uppercase tracking-wider"
           >
-            Como Funciona
+            How It Works
           </a>
           <a
             href="#reviews"
             className="text-sm font-semibold hover:text-[#DFB277] transition-colors uppercase tracking-wider"
           >
-            Depoimentos
+            Reviews
           </a>
           <a
             href="#cta"
             className="bg-[#2d5a4c] text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-[#1a2e2a] transition-all active:scale-95"
           >
-            VERIFICAR DISPONIBILIDADE
+            CHECK AVAILABILITY
           </a>
         </div>
       </div>
@@ -65,12 +65,12 @@ const Navbar: React.FC = () => {
 const ProductSidebarCard: React.FC = () => (
   <div className="bg-white rounded-xl p-6 border border-gray-200 relative group border-t-4 border-t-[#DFB277]">
     <div className="absolute top-0 right-0 bg-[#DFB277] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-bl-xl z-10">
-      Mais Vendido
+      Best Seller
     </div>
     <div className="relative overflow-hidden rounded-xl mb-6 aspect-square bg-[#fdfbf7]">
       <img
         src="/images/product.png"
-        alt="Axen NeuroFuel Jar"
+        alt="Axen NeuroFuel Tub"
         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 p-4"
       />
     </div>
@@ -84,30 +84,30 @@ const ProductSidebarCard: React.FC = () => (
         </div>
       </div>
       <p className="text-[10px] text-gray-400 font-black uppercase tracking-[0.2em] italic">
-        Protocolo NeuroRestore™
+        NeuroRestore™ Protocol
       </p>
       <div className="space-y-3">
         <div className="flex items-center gap-3 text-xs text-[#2d5a4c] font-bold bg-[#f0f4f3] p-3 rounded-xl border border-[#2d5a4c]/5">
           <Zap className="w-4 h-4 shrink-0" />
-          <span>Foco Aumentado em 64%*</span>
+          <span>Focus Increased by 64%*</span>
         </div>
         <div className="flex items-center gap-3 text-xs text-[#2d5a4c] font-bold bg-[#f0f4f3] p-3 rounded-xl border border-[#2d5a4c]/5">
           <Brain className="w-4 h-4 shrink-0" />
-          <span>Cognição 74% Superior*</span>
+          <span>74% Superior Cognition*</span>
         </div>
       </div>
       <a
         href="#cta"
         className="block text-center bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-5 rounded-xl transition-all text-lg uppercase tracking-tight"
       >
-        ADQUIRIR AGORA
+        ORDER NOW
       </a>
       <div className="flex justify-between items-center px-2 py-1 opacity-60">
         <div className="flex items-center gap-1.5 text-[8px] text-gray-400 font-black uppercase tracking-widest">
-          <ShieldCheck className="w-3 h-3" /> 30 Dias Garantia
+          <ShieldCheck className="w-3 h-3" /> 30 Day Guarantee
         </div>
         <div className="flex items-center gap-1.5 text-[8px] text-gray-400 font-black uppercase tracking-widest">
-          <Truck className="w-3 h-3" /> Frete Grátis
+          <Truck className="w-3 h-3" /> Free Shipping
         </div>
       </div>
     </div>
@@ -129,7 +129,7 @@ const CountdownTimer: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex gap-2 justify-center items-center font-mono text-2xl font-black text-red-600 bg-red-50 py-3 px-6 rounded-xl border border-red-100">
+    <div className="flex gap-2 justify-center items-center font-mono text-2xl font-black text-red-600 py-3 px-6 rounded-xl border border-red-100">
       <span>{timeLeft.minutes.toString().padStart(2, "0")}</span>
       <span className="animate-pulse">:</span>
       <span>{timeLeft.seconds.toString().padStart(2, "0")}</span>
@@ -143,11 +143,11 @@ export default function Home_Page() {
   const [today, setToday] = useState("");
 
   useEffect(() => {
-    setToday(new Date().toLocaleDateString("pt-BR"));
+    setToday(new Date().toLocaleDateString("en-US"));
   }, []);
 
   return (
-    <div className="min-h-screen bg-red-500 text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]">
+    <div className="min-h-screen  text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-4 py-8 md:py-12">
@@ -158,36 +158,36 @@ export default function Home_Page() {
             <header className="mb-12">
               <div className="flex flex-wrap items-center gap-4 mb-8">
                 <span className="inline-flex items-center px-4 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] bg-[#DFB277]/10 text-[#a8824f] border border-[#DFB277]/20">
-                  <Eye className="w-3.5 h-3.5 mr-2" /> 8.547 pessoas lendo agora
+                  <Eye className="w-3.5 h-3.5 mr-2" /> 8,547 people reading now
                 </span>
                 <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest flex items-center">
-                  <Clock className="w-3.5 h-3.5 mr-2" /> 4 min de leitura
+                  <Clock className="w-3.5 h-3.5 mr-2" /> 4 min read
                 </span>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-8 font-playfair italic text-[#1a2e2a]">
-                E Se Eu Te Dissesse Que Um Simples Cogumelo É Capaz De Eliminar
-                a Névoa Mental e Aumentar o Foco em 64%?
+                What If I Told You That A Simple Mushroom Could Eliminate
+                Brain Fog and Increase Focus by 64%?
               </h1>
 
               <h2 className="text-xl md:text-2xl text-gray-500 font-light mb-12 italic border-l-4 border-[#DFB277] pl-8">
-                Eu Também Achei Que Era Golpe — Então Decidi Testar Eu Mesma.
+                I Also Thought It Was A Scam — So I Decided To Test It Myself.
               </h2>
 
-              {/* Main Sarah Image - Hero Lifestyle Segurando Pote */}
+              {/* Main Sarah Image - Hero Lifestyle Holding Tub */}
               <div className="relative mb-12 group overflow-hidden rounded-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1556911229-bbd4860153f3?auto=format&fit=crop&q=80&w=1200&h=800"
-                  alt="Sarah Mitchell segurando pote Axen NeuroFuel"
+                  src="/images/woman-hold-product.png"
+                  alt="Sarah Mitchell holding Axen NeuroFuel tub"
                   className="w-full object-cover aspect-4/3 group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black/80 to-transparent text-white">
                   <p className="text-sm font-bold opacity-80 mb-2 uppercase tracking-widest italic">
-                    Pesquisadora & Nutricionista
+                    Researcher & Nutritionist
                   </p>
                   <p className="text-xl font-medium italic">
-                    "Eu jurei que era golpe... até ver os dados clínicos e
-                    sentir a névoa sumir."
+                    "I swore it was a scam... until I saw the clinical data and
+                    felt the fog lift."
                   </p>
                 </div>
               </div>
@@ -195,20 +195,20 @@ export default function Home_Page() {
               <div className="flex items-center gap-5 border-t border-b border-gray-100 py-8 mb-16">
                 <div className="w-16 h-16 rounded-xl border-2 border-[#DFB277] overflow-hidden shrink-0">
                   <img
-                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=150&h=150"
+                    src="/images/woman-icon.png"
                     alt="Sarah Mitchell Portrait Bio"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
                   <p className="font-black text-lg text-[#1a2e2a]">
-                    Por Sarah Mitchell
+                    By Sarah Mitchell
                   </p>
                   <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider leading-tight">
-                    Nutricionista Funcional & Pesquisadora de Saúde Cognitiva
+                    Functional Nutritionist & Cognitive Health Researcher
                   </p>
                   <p className="text-[10px] text-gray-400 mt-2 font-black uppercase tracking-widest italic">
-                    Última atualização: {today}
+                    Last update: {today}
                   </p>
                 </div>
               </div>
@@ -217,76 +217,72 @@ export default function Home_Page() {
             {/* INTRO TEXT */}
             <section className="prose prose-lg text-gray-700 max-w-none space-y-8 leading-relaxed">
               <h3 className="text-3xl font-black text-[#DFB277] italic leading-tight">
-                Eu Jurei Que Esse Era Mais Um Daqueles “Truques” De Internet
-                (Truque do Mel, Truque do Sal Rosa) Mas Não — Veja Como Eu Tive
-                Que Engolir Minhas Palavras
+                I Swore This Was Another One Of Those Internet "Tricks"
+                (Honey Trick, Pink Salt Trick) But No — See How I Had
+                To Eat My Words
               </h3>
 
               <p>
-                Eu testo suplementos para ganhar a vida. Já consultei para
-                empresas de bem-estar, participei de painéis de especialistas e
-                testei mais fórmulas no meu próprio corpo do que gostaria de
-                admitir.
+                I test supplements for a living. I've consulted for wellness
+                companies, sat on expert panels, and tested more formulas on
+                my own body than I care to admit.
               </p>
 
               <p>
-                E aqui está a verdade:{" "}
+                And here's the truth:{" "}
                 <strong>
-                  Nove em cada dez vezes, eu digo para as pessoas guardarem o
-                  dinheiro.
+                  Nine times out of ten, I tell people to save their
+                  money.
                 </strong>
               </p>
 
               <p>
-                Então, quando mais um produto de cogumelos começou a viralizar
-                na internet, tive a mesma reaction que você provavelmente teve:
+                So when yet another mushroom product started going viral on
+                the internet, I had the same reaction you probably did:
               </p>
 
               <div className="bg-[#fdfbf7] border-l-4 border-[#DFB277] p-8 rounded-xl italic space-y-4 font-medium text-gray-700">
-                <p>“Ah, olha só, a internet descobriu cogumelos… de novo.”</p>
+                <p>"Oh, look, the internet discovered mushrooms… again."</p>
                 <p>
-                  “Já tentei o café de cogumelo. Cuspi na pia. Não senti nada.”
+                  "I've tried the mushroom coffee. Spat it in the sink. Felt nothing."
                 </p>
                 <p>
-                  “Um suplemento? Eliminando a névoa mental? Só acredito quando
-                  sentir.”
+                  "A supplement? Eliminating brain fog? I'll believe it when
+                  I feel it."
                 </p>
               </div>
 
-              <p>Tantos produtos de bem-estar virais seguem o mesmo roteiro:</p>
-              <div className="bg-red-50 text-red-600 p-4 rounded-xl font-black text-center uppercase tracking-widest text-sm border border-red-100">
-                Promessas Enormes → Dose Mínima → Rótulo Bonito → Zero
-                Resultados
+              <p>So many viral wellness products follow the same script:</p>
+              <div className=" text-red-600 p-4 rounded-xl font-black text-center uppercase tracking-widest text-sm border border-red-100">
+                Huge Promises → Tiny Dose → Pretty Label → Zero Results
               </div>
 
               <p>
-                Então eu esperava completamente que esse suplemento de Lion’s
-                Mane fosse mais um fracasso superestimado. Até que um documento
-                chegou na minha mesa que me fez dizer:{" "}
-                <strong>“Espera, sério?”</strong>
+                So I fully expected this Lion’s Mane supplement to be yet
+                another overrated failure. Until a document landed on my desk
+                that made me say: <strong>"Wait, really?"</strong>
               </p>
 
               <p>
-                Um estudo publicado no{" "}
-                <i>International Journal of Medicinal Mushrooms</i> mostrou que
-                Lion’s Mane aumentou significativamente os níveis de NGF (Fator
-                de Crescimento Neural) em adultos após apenas 8 semanas de uso.
+                A study published in the{" "}
+                <i>International Journal of Medicinal Mushrooms</i> showed that
+                Lion’s Mane significantly increased NGF (Nerve Growth Factor)
+                levels in adults after just 8 weeks of use.
               </p>
 
               <p>
-                Não era “teste de influenciador patrocinado pela marca.” Eram
-                adultos reais tomando o produto diariamente… com resultados
-                rastreados.
+                This wasn’t a "brand-sponsored influencer test." These were
+                real adults taking the product daily… with tracked results.
               </p>
 
               {/* CLINICAL TABLE */}
               <div className="my-16 bg-white rounded-xl border border-gray-200 overflow-hidden">
                 <div className="bg-[#2d5a4c] p-8 text-white">
                   <h4 className="text-2xl font-black italic text-[#DFB277]">
-                    Resultados Clínicos Comprovados
+                    Proven Clinical Results
                   </h4>
                   <p className="text-xs font-bold uppercase tracking-widest opacity-80 mt-2">
-                    Após 8 Semanas, Os Participantes Relataram:
+                    After 8 Weeks, Participants Reported:
                   </p>
                 </div>
                 <div className="p-0">
@@ -294,32 +290,32 @@ export default function Home_Page() {
                     <thead className="bg-slate-50 border-b border-gray-100">
                       <tr>
                         <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-gray-400">
-                          Benefício
+                          Benefit
                         </th>
                         <th className="px-8 py-4 text-xs font-black uppercase tracking-widest text-gray-400 text-right">
-                          Melhoria
+                          Improvement
                         </th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100 font-bold">
                       {[
                         {
-                          label: "Redução da névoa mental",
+                          label: "Brain fog reduction",
                           val: "58%",
                           color: "bg-blue-500",
                         },
                         {
-                          label: "Melhoria na cognição",
+                          label: "Cognition improvement",
                           val: "74%",
                           color: "bg-[#2d5a4c]",
                         },
                         {
-                          label: "Melhoria na memória",
+                          label: "Memory improvement",
                           val: "44%",
                           color: "bg-[#DFB277]",
                         },
                         {
-                          label: "Aumento do foco",
+                          label: "Focus increase",
                           val: "64%",
                           color: "bg-emerald-500",
                         },
@@ -343,43 +339,42 @@ export default function Home_Page() {
                 </div>
                 <div className="p-8 bg-slate-50 border-t border-gray-100 text-gray-700">
                   <p className="text-xs text-gray-400 font-medium italic">
-                    * Dados publicados e verificados por terceiros — algo que a
-                    maioria dos produtos de cogumelo não consegue oferecer.
+                    * Data published and verified by third parties — something
+                    most mushroom products cannot offer.
                   </p>
                 </div>
               </div>
 
               <p>
-                Ainda assim, eu não estava convencida. Números são uma coisa. A
-                vida real é outra.
+                Still, I wasn’t convinced. Numbers are one thing. Real life
+                is another.
               </p>
               <p>
-                Então enviei o estudo e a fórmula para algumas amigas
-                nutricionistas que testam produtos da mesma forma que eu.
-                Esperava mais revirar de olhos. Em vez disso, recebi isso:
+                So I sent the study and the formula to a few nutritionist friends
+                who test products the same way I do. I expected more eye-rolling.
+                Instead, I got this:
               </p>
 
               <div className="grid md:grid-cols-1 gap-4 text-gray-700">
                 <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
-                  “Os resultados foram mais fortes do que eu esperava.”
+                  "The results were stronger than I expected."
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
-                  “Superou todos os suplementos ‘sérios’ que testei este ano.”
+                  "It outperformed every 'serious' supplement I've tested this year."
                 </div>
                 <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
-                  “Era a última coisa que eu achava que ajudaria meus clientes…
-                  e ajudou.”
+                  "It was the last thing I thought would help my clients… and it did."
                 </div>
               </div>
 
               {/* STORY SECTION */}
               <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
-                O Lapso Mental Que Me Fez Desmoronar
+                The Mental Lapse That Made Me Break Down
               </h3>
 
               <div className="relative rounded-xl overflow-hidden mb-12 border-4 border-white">
                 <img
-                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200&h=600"
+                  src="/images/mental-fog-senior.png"
                   alt="Senior forgetting something"
                   className="w-full object-cover aspect-video grayscale contrast-125"
                 />
@@ -388,239 +383,232 @@ export default function Home_Page() {
 
               <div className="space-y-6 text-gray-700">
                 <p>
-                  Sinceramente? Minha própria névoa mental estava ficando cada
-                  vez mais difícil de esconder.
+                  Honestly? My own brain fog was getting harder and harder to hide.
                 </p>
                 <p>
-                  Começou silenciosamente, com pequenos deslizes que eu ficava
-                  ignorando:
+                  It started quietly, with small slips that I kept ignoring:
                 </p>
                 <ul className="space-y-2 font-medium text-gray-600 pl-4 border-l-2 border-[#DFB277]/20">
-                  <li>• Perder o fio do pensamento no meio de uma frase.</li>
+                  <li>• Losing my train of thought mid-sentence.</li>
                   <li>
-                    • Entrar num cômodo e esquecer completamente o que fui fazer
-                    lá.
+                    • Walking into a room and completely forgetting what I went
+                    there for.
                   </li>
                   <li>
-                    • Evitar organizar o armário porque meu cérebro parecia
-                    “cheio demais”.
+                    • Avoiding organizing the closet because my brain felt
+                    "too full".
                   </li>
                 </ul>
-                <p>Irritante, claro. Mas administrável.</p>
-                <p>Até o dia em que meu cérebro realmente me traiu.</p>
+                <p>Annoying, sure. But manageable.</p>
+                <p>Until the day my brain truly betrayed me.</p>
                 <p>
-                  Eu estava numa chamada de vídeo com uma cliente de longa data
-                  — alguém que confia em mim com a saúde dela. E eu chamei ela
-                  pelo nome errado.
+                  I was on a video call with a long-time client — someone who
+                  trusts me with her health. And I called her by the wrong name.
                 </p>
-                <p>Duas vezes.</p>
-                <p>Eu ri e desculpei. Culpei o “cansaço do dia”.</p>
-                <p>Depois recomendei um plano alimentar que incluía glúten.</p>
+                <p>Twice.</p>
+                <p>I laughed it off and apologized. Blamed it on "end-of-day fatigue".</p>
+                <p>Then I recommended a meal plan that included gluten.</p>
                 <p>
-                  Ela tem intolerância a glúten. Eu sei disso desde o primeiro
-                  dia.
+                  She has a gluten intolerance. I've known this since day one.
                 </p>
                 <p>
-                  Eu vi a expressão dela mudar de calorosa → confusa → magoada.
+                  I saw her expression change from warm → confused → hurt.
                 </p>
-                <p>E senti algo que não sentia há muito tempo.</p>
-                <p>Vergonha. Aquela que queima o rosto.</p>
+                <p>And I felt something I hadn’t felt in a long time.</p>
+                <p>Shame. The kind that burns your face.</p>
                 <p>
-                  Quando a chamada terminou, fechei o laptop, fui até a cozinha
-                  e encostei a testa no balcão. E chorei.
-                </p>
-                <p>
-                  Porque no fundo, eu sabia que isso não era só estresse. Algo
-                  no meu cérebro não estava funcionando como antes.
+                  When the call ended, I closed my laptop, went to the kitchen,
+                  and leaned my forehead against the counter. And I cried.
                 </p>
                 <p>
-                  E pela primeira vez, tive que me fazer a mesma pergunta
-                  difícil que faço aos meus clientes:
+                  Because deep down, I knew this wasn't just stress. Something
+                  in my brain wasn't working like it used to.
+                </p>
+                <p>
+                  And for the first time, I had to ask myself the same hard
+                  question I ask my clients:
                 </p>
                 <p className="font-bold text-[#2d5a4c] italic">
-                  “Isso é só esgotamento… ou tem algo mais profundo
-                  acontecendo?”
+                  "Is this just burnout… or is there something deeper
+                  happening?"
                 </p>
               </div>
 
               <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
-                Como a “Névoa Mental” Aparece Na Sua Vida?
+                How Does "Brain Fog" Show Up In Your Life?
               </h3>
               <p>
-                Se você reconhece esses deslizes diários, você não está sozinho:
+                If you recognize these daily slips, you're not alone:
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 my-12 text-gray-700">
                 <div className="bg-white border border-gray-100 p-8 rounded-xl hover:bg-slate-50 transition-colors">
                   <Target className="text-[#2d5a4c] w-10 h-10 mb-4" />
                   <h4 className="font-black text-lg mb-3 uppercase tracking-wide">
-                    O Foco Escapa
+                    Focus Slips Away
                   </h4>
                   <p className="text-sm leading-relaxed">
-                    Você não se concentra em tarefas simples, não se lembra o
-                    que deve ser feito… as palavras se embaralham, nada fixa, e
-                    seu cérebro divaga no matter how hard you try.
+                    You can't concentrate on simple tasks, you don't remember
+                    what needs to be done… words get jumbled, nothing sticks,
+                    and your brain wanders no matter how hard you try.
                   </p>
                 </div>
                 <div className="bg-white border border-gray-100 p-8 rounded-xl hover:bg-slate-50 transition-colors">
                   <Heart className="text-red-400 w-10 h-10 mb-4" />
                   <h4 className="font-black text-lg mb-3 uppercase tracking-wide">
-                    Relacionamentos
+                    Relationships
                   </h4>
                   <p className="text-sm leading-relaxed">
-                    Você se desliga enquanto seu parceiro ou filhos estão
-                    falando. Você esquece conversas que acabou de ter, ou
-                    esquece de responder uma mensagem.
+                    You zone out while your partner or kids are talking. You
+                    forget conversations you just had, or forget to reply to
+                    a message.
                   </p>
                 </div>
                 <div className="bg-white border border-gray-100 p-8 rounded-xl hover:bg-slate-50 transition-colors">
                   <Brain className="text-[#DFB277] w-10 h-10 mb-4" />
                   <h4 className="font-black text-lg mb-3 uppercase tracking-wide">
-                    Lapsos de Memória
+                    Memory Lapses
                   </h4>
                   <p className="text-sm leading-relaxed">
-                    Você perde o horário de buscar alguém, esquece um
-                    aniversário, ou dá branco em um detalhe simples — e você vê
-                    aquele olhar de preocupação.
+                    You miss the time to pick someone up, forget a birthday,
+                    or blank on a simple detail — and you see that look of
+                    worry.
                   </p>
                 </div>
                 <div className="bg-white border border-gray-100 p-8 rounded-xl hover:bg-slate-50 transition-colors">
                   <Home className="text-blue-400 w-10 h-10 mb-4" />
                   <h4 className="font-black text-lg mb-3 uppercase tracking-wide">
-                    Vida Social
+                    Social Life
                   </h4>
                   <p className="text-sm leading-relaxed">
-                    É sua vez de receber a família — nada demais — mas você fica
-                    sobrecarregado e desiste. Quando você não consegue se
-                    organizar, sua confiança despenca.
+                    It's your turn to host family — no big deal — but you get
+                    overwhelmed and give up. When you can't get organized, your
+                    confidence plummets.
                   </p>
                 </div>
               </div>
 
               <div className="text-center py-10">
                 <p className="text-2xl font-light text-gray-400 italic">
-                  “Se esses momentos estão se acumulando, provavelmente estão
-                  apontando para algo maior.”
+                  "If these moments are piling up, they’re probably pointing
+                  to something bigger."
                 </p>
               </div>
 
-              {/* SECTION: O Que Está Realmente Por Trás Desses Lapsos? */}
+              {/* SECTION: What’s Really Behind These Memory Lapses? */}
               <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
-                O Que Está Realmente Por Trás Desses Lapsos de Memória?
+                What’s Really Behind These Memory Lapses?
               </h3>
               <div className="space-y-6 text-gray-700">
                 <p>
-                  Se você tem se sentido mal — com névoa, esquecido, sem foco —
-                  você não é preguiçoso. Você não está “ficando velho.”
+                  If you’ve been feeling off — foggy, forgetful, unfocused —
+                  you’re not lazy. You’re not just “getting old.”
                 </p>
                 <p>
-                  Aquela sensação de embaralhamento, de não conseguir pensar?
-                  Isso é o que os cientistas chamam de{" "}
-                  <strong>“Fadiga Neural”</strong> — o esgotamento progressivo
-                  dos sinais biológicos que permitem ao cérebro se reparar.
+                  That jumbled feeling, of not being able to think? That's what
+                  scientists call <strong>“Neural Fatigue”</strong> — the
+                  progressive depletion of the biological signals that allow the
+                  brain to repair itself.
                 </p>
 
                 <div className="bg-[#f0f4f3] p-8 rounded-xl border border-[#2d5a4c]/10 italic">
-                  "Pense nisso como um celular com bateria baixa. A tela fica
-                  menos brilhante, os processos em segundo plano são desligados…
-                  tudo funciona, só que mais devagar. O cérebro faz exatamente a
-                  mesma coisa."
+                  "Think of it like a cell phone with a low battery. The screen
+                  gets dimmer, background processes shut down… everything works,
+                  just slower. The brain does exactly the same thing."
                 </div>
 
                 <h4 className="text-2xl font-black text-[#1a2e2a] mt-8">
-                  O Que a Ciência Descobriu:
+                  What Science Has Discovered:
                 </h4>
                 <p>
-                  Estudos mostram que, após os 40 anos, nosso cérebro começa a
-                  reduzir progressivamente a produção de uma proteína chamada{" "}
+                  Studies show that after age 40, our brain progressively
+                  reduces the production of a protein called{" "}
                   <strong>
-                    NGF — Nerve Growth Factor (Fator de Crescimento Neural)
+                    NGF — Nerve Growth Factor
                   </strong>
                   .
                 </p>
 
-                <p>O NGF é o sinal biológico responsável por:</p>
+                <p>NGF is the biological signal responsible for:</p>
                 <ul className="space-y-3 font-medium text-gray-700">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />{" "}
-                    Manter neurônios vivos
+                    Keeping neurons alive
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />{" "}
-                    Preservar conexões neurais
+                    Preserving neural connections
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />{" "}
-                    Permitir que o cérebro forme novas sinapses
+                    Allowing the brain to form new synapses
                   </li>
                 </ul>
 
                 <p>
-                  Quando o cérebro não recebe NGF suficiente, ele entra no que
-                  os cientistas chamam de “modo de sobrevivência”:
+                  When the brain doesn't get enough NGF, it enters what
+                  scientists call “survival mode”:
                 </p>
                 <ul className="space-y-2 text-sm italic text-gray-600 pl-4 border-l-2 border-slate-200">
-                  <li>• Ele reduz a formation de novas conexões.</li>
-                  <li>• Diminui a consolidação de memórias.</li>
-                  <li>• Desacelera a velocidade de processamento.</li>
+                  <li>• It reduces the formation of new connections.</li>
+                  <li>• It slows down memory consolidation.</li>
+                  <li>• It decreases processing speed.</li>
                 </ul>
 
                 <p>
-                  Não porque você está ficando “velho demais”. Mas porque o
-                  system entendeu que não é seguro investir em desempenho.
+                  Not because you’re “too old.” But because the system decided
+                  it’s not safe to invest in performance.
                 </p>
 
                 <div className="bg-slate-50 p-10 rounded-xl border border-slate-200 my-12">
                   <h4 className="text-xl font-black text-[#1a2e2a] mb-6 uppercase tracking-wider">
-                    A Fadiga Neural Se Acumula Quando:
+                    Neural Fatigue Builds Up When:
                   </h4>
                   <div className="space-y-4 text-gray-700">
                     <div className="flex items-start gap-4">
                       <XCircle className="text-red-500 w-6 h-6 shrink-0" />
                       <span className="text-sm font-bold leading-relaxed">
-                        Hormônios do estresse ficam elevados o dia todo
+                        Stress hormones stay elevated all day
                       </span>
                     </div>
                     <div className="flex items-start gap-4">
                       <XCircle className="text-red-500 w-6 h-6 shrink-0" />
                       <span className="text-sm font-bold leading-relaxed">
-                        Tarefas inacabadas zumbem no fundo da mente
+                        Unfinished tasks buzz in the back of your mind
                       </span>
                     </div>
                     <div className="flex items-start gap-4">
                       <XCircle className="text-red-500 w-6 h-6 shrink-0" />
                       <span className="text-sm font-bold leading-relaxed">
-                        Seu intestino e system imunológico enviam sinais
-                        “errados”
+                        Your gut and immune system send the "wrong" signals
                       </span>
                     </div>
                     <div className="flex items-start gap-4">
                       <XCircle className="text-red-500 w-6 h-6 shrink-0" />
                       <span className="text-sm font-bold leading-relaxed">
-                        Dispositivos digitais puxam seu cérebro para fora do
-                        foco
+                        Digital devices pull your brain away from focus
                       </span>
                     </div>
                   </div>
                 </div>
 
                 <p>
-                  Raramente é uma coisa grande. É tudo te atingindo de uma vez —
-                  até que seu cérebro está superestimulado, supersaturado e
-                  completamente esgotado.
+                  It's rarely one big thing. It's everything hitting you at
+                  once — until your brain is overstimulated, oversaturated, and
+                  completely drained.
                 </p>
                 <p>
-                  Claro, você pode adicionar cafeína… mais estimulação. Mas isso
-                  é como adicionar uma banda marcial ao caos.
+                  Of course, you can add caffeine… more stimulation. But that’s
+                  like adding a marching band to the chaos.
                 </p>
               </div>
 
-              {/* TRANSITION SECTION: Ok… Como Eu Elimino Essa “Fadiga Neural”? */}
+              {/* TRANSITION SECTION: Ok… How Do I Eliminate This "Neural Fatigue"? */}
               <h3
                 className="text-3xl font-black italic text-[#1a2e2a] pt-12"
                 id="how-it-works"
               >
-                Ok… Como Eu Elimino Essa “Fadiga Neural”?
+                Ok… How Do I Eliminate This “Neural Fatigue”?
               </h3>
 
               <div className="my-8 rounded-xl overflow-hidden border border-gray-100">
@@ -633,43 +621,43 @@ export default function Home_Page() {
 
               <div className="space-y-6 text-gray-700">
                 <p>
-                  Sair do “esgotamento” para o foco não é complicado. Você
-                  simplesmente precisa dar ao seu cérebro o suporte diário que
-                  ele precisa para otimizar:
+                  Going from “burned out” to focused isn't complicated. You
+                  simply need to give your brain the daily support it needs
+                  to optimize:
                 </p>
                 <ul className="grid grid-cols-1 md:grid-cols-3 gap-3 font-bold text-xs uppercase tracking-widest text-[#2d5a4c]">
                   <li className="bg-[#f0f4f3] p-4 rounded-xl text-center border border-[#2d5a4c]/10">
-                    Química do Estresse
+                    Stress Chemistry
                   </li>
                   <li className="bg-[#f0f4f3] p-4 rounded-xl text-center border border-[#2d5a4c]/10">
-                    Sinais de Crescimento Neural
+                    Neural Growth Signals
                   </li>
                   <li className="bg-[#f0f4f3] p-4 rounded-xl text-center border border-[#2d5a4c]/10">
-                    Conexão Intestino-Cérebro
+                    Gut-Brain Connection
                   </li>
                 </ul>
                 <p>
-                  Axen NeuroFuel® é a primeira fórmula que testei que suporta
-                  todas as três áreas.
+                  Axen NeuroFuel® is the first formula I’ve tested that supports
+                  all three areas.
                 </p>
               </div>
 
               {/* APRESENTANDO SECTION */}
               <div className="bg-[#fdfbf7] p-10 rounded-xl border-2 border-[#DFB277]/20 relative overflow-hidden my-16 text-gray-700">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#DFB277] mb-6">
-                  APRESENTANDO
+                  INTRODUCING
                 </h4>
                 <h3 className="text-4xl font-black text-[#1a2e2a] mb-6">
                   Axen NeuroFuel®
                 </h3>
                 <p className="text-lg text-gray-500 italic mb-10 leading-relaxed">
-                  A primeira fórmula que testei que suporta química do estresse,
-                  sinais de crescimento neural e clareza cognitiva — tudo em um
-                  ritual diário simples.
+                  The first formula I tested that supports stress chemistry,
+                  neural growth signals, and cognitive clarity — all in one
+                  simple daily ritual.
                 </p>
                 <img
                   src="/images/product.png"
-                  alt="Pote do Axen NeuroFuel com o pó ao redor"
+                  alt="Axen NeuroFuel tub with powder around it"
                   className="w-full rounded-xl mb-10 border border-gray-100 object-contain"
                 />
               </div>
@@ -679,106 +667,104 @@ export default function Home_Page() {
                 {/* POINT 1 */}
                 <div className="space-y-6">
                   <h4 className="text-2xl font-black text-[#1a2e2a] italic border-b-2 border-[#DFB277] pb-4 inline-block">
-                    1. Axen NeuroFuel® Reativa o Sinal de Crescimento Neural
+                    1. Axen NeuroFuel® Reactivates Neural Growth Signals
                   </h4>
                   <p className="text-sm font-bold uppercase tracking-widest text-gray-400">
-                    Alimentado por Lion’s Mane + Vitaminas B9 e B12
+                    Powered by Lion’s Mane + Vitamins B9 and B12
                   </p>
                   <p>
-                    Axen NeuroFuel® é formulado com o ativador cerebral da
-                    natureza: Lion’s Mane. Este super composto estimula a
-                    produção de fatores de crescimento neural — os sinais que
-                    ajudam as células cerebrais a permanecerem saudáveis e se
-                    comunicarem eficientemente ao longo do tempo.*
+                    Axen NeuroFuel® is formulated with nature’s brain activator:
+                    Lion’s Mane. This super compound stimulates the production
+                    of neural growth factors — the signals that help brain cells
+                    stay healthy and communicate efficiently over time.*
                   </p>
                   <p>
-                    Um estudo publicado no <i>Phytotherapy Research</i> mostrou
-                    que participantes que tomaram Lion’s Mane por 16 semanas
-                    apresentaram melhora significativa na função cognitiva
-                    comparados ao grupo placebo.
+                    A study published in <i>Phytotherapy Research</i> showed
+                    that participants who took Lion’s Mane for 16 weeks showed
+                    significant improvement in cognitive function compared to
+                    the placebo group.
                   </p>
                   <div className="space-y-3 mt-6">
                     <div className="flex gap-4 bg-white p-6 rounded-xl border border-gray-200 font-bold text-sm leading-relaxed">
                       <CheckCircle className="text-[#DFB277] w-5 h-5 shrink-0" />
                       <span>
-                        A memória do dia a dia fica nítida — Chega de perder o
-                        fio do pensamento no meio da frase, esquecer
-                        compromissos ou dar branco em fatos simples.
+                        Everyday memory becomes sharp — No more losing your
+                        train of thought mid-sentence, forgetting appointments,
+                        or blanking on simple facts.
                       </span>
                     </div>
                     <div className="flex gap-4 bg-white p-6 rounded-xl border border-gray-200 font-bold text-sm leading-relaxed">
                       <CheckCircle className="text-[#DFB277] w-5 h-5 shrink-0" />
                       <span>
-                        Você consegue fazer as coisas — Você vai de email →
-                        reunião → lista de tarefas sem se perder, travar ou
-                        esquecer o que estava fazendo.
+                        You get things done — You go from email → meeting →
+                        to-do list without getting lost, freezing, or
+                        forgetting what you were doing.
                       </span>
                     </div>
                     <div className="flex gap-4 bg-white p-6 rounded-xl border border-gray-200 font-bold text-sm leading-relaxed">
                       <CheckCircle className="text-[#DFB277] w-5 h-5 shrink-0" />
                       <span>
-                        Seu foco permanece estável — Para você não estar afiado
-                        de manhã e embaralhado ao meio-dia.
+                        Your focus stays steady — So you aren't sharp in the
+                        morning and jumbled by noon.
                       </span>
                     </div>
                   </div>
                   <p className="text-sm italic text-gray-500 pt-4">
-                    Pouco a pouco, a desordem se limpa e seu cérebro se sente
-                    “seu” de novo.
+                    Bit by bit, the clutter clears and your brain feels “yours”
+                    again.
                   </p>
                 </div>
 
                 {/* POINT 2 */}
                 <div className="space-y-6">
                   <h4 className="text-2xl font-black text-[#1a2e2a] italic border-b-2 border-[#2d5a4c] pb-4 inline-block">
-                    2. Axen NeuroFuel® Silencia os “Alarmes” do Estresse
+                    2. Axen NeuroFuel® Silences Stress "Alarms"
                   </h4>
                   <p className="text-sm font-bold uppercase tracking-widest text-gray-400">
-                    Alimentado por Rhodiola Rosea
+                    Powered by Rhodiola Rosea
                   </p>
                   <p>
-                    Axen NeuroFuel® contém adaptógenos poderosos como Rhodiola
-                    Rosea. Esses ingredientes potentes preparam seu corpo para
-                    responder aos sinais de estresse de forma mais suave.
+                    Axen NeuroFuel® contains powerful adaptogens like Rhodiola
+                    Rosea. These potent ingredients prepare your body to respond
+                    to stress signals more smoothly.
                   </p>
                   <p>
-                    Um estudo no <i>Journal of Ethnopharmacology</i> demonstrou
-                    que Rhodiola reduziu significativamente os sintomas de
-                    fadiga mental em profissionais estressados após apenas 4
-                    semanas. Em vez de apertar os dentes para passar pelas
-                    tarefas, você se sente estável, calmo e mentalmente
-                    presente.
+                    A study in the <i>Journal of Ethnopharmacology</i> demonstrated
+                    that Rhodiola significantly reduced mental fatigue symptoms
+                    in stressed professionals after just 4 weeks. Instead of
+                    gritting your teeth to get through tasks, you feel steady,
+                    calm, and mentally present.
                   </p>
                   <div className="bg-slate-50 p-8 rounded-xl space-y-6 text-sm text-gray-700 border border-slate-200">
                     <p className="flex items-start gap-4">
                       <CheckCircle className="text-[#2d5a4c] w-5 h-5 shrink-0" />
                       <span>
                         <strong>
-                          “Sua paciência volta, mesmo em dias caóticos.”
+                          “Your patience returns, even on chaotic days.”
                         </strong>{" "}
-                        → Uma resposta ao estresse mais suave = menos
-                        reatividade, mais capacidade emocional.
+                        → A smoother stress response = less reactivity, more
+                        emotional capacity.
                       </span>
                     </p>
                     <p className="flex items-start gap-4">
                       <CheckCircle className="text-[#2d5a4c] w-5 h-5 shrink-0" />
                       <span>
                         <strong>
-                          “Você não pula a cada interrupção — permanece composto
-                          em vez de agitado.”
+                          “You don’t jump at every interruption — you stay
+                          composed instead of agitated.”
                         </strong>{" "}
-                        → Adaptógenos apoiam calma e resiliência sob pressão.
+                        → Adaptogens support calm and resilience under pressure.
                       </span>
                     </p>
                     <p className="flex items-start gap-4">
                       <CheckCircle className="text-[#2d5a4c] w-5 h-5 shrink-0" />
                       <span>
                         <strong>
-                          “Aquela faxina que você estava adiando? Feita em uma
-                          hora.”
+                          “That house cleaning you were putting off? Done in
+                          an hour.”
                         </strong>{" "}
-                        → Menor carga de estresse = mais capacidade, menos
-                        evitação, mais conclusão.
+                        → Lower stress load = more capacity, less avoidance,
+                        more completion.
                       </span>
                     </p>
                   </div>
@@ -787,40 +773,39 @@ export default function Home_Page() {
                 {/* POINT 3 */}
                 <div className="space-y-6">
                   <h4 className="text-2xl font-black text-[#1a2e2a] italic border-b-2 border-emerald-500 pb-4 inline-block">
-                    3. Axen NeuroFuel® Sustenta Clareza e Foco Enquanto a
-                    Reconstrução Acontece
+                    3. Axen NeuroFuel® Sustains Clarity and Focus While
+                    Rebuilding Happens
                   </h4>
                   <p className="text-sm font-bold uppercase tracking-widest text-gray-400">
-                    Alimentado por Alpha-GPC + L-Theanine + Cafeína Natural
+                    Powered by Alpha-GPC + L-Theanine + Natural Caffeine
                   </p>
                   <p>
-                    Axen NeuroFuel® também é potencializado com Alpha-GPC,
-                    precursor direto da acetilcolina — o neurotransmissor
-                    essencial para memória e aprendizado.
+                    Axen NeuroFuel® is also boosted with Alpha-GPC, a direct
+                    precursor to acetylcholine — the essential neurotransmitter
+                    for memory and learning.
                   </p>
                   <p>
-                    Combinado com L-Theanine e uma microdose de cafeína natural,
-                    você tem:
+                    Combined with L-Theanine and a microdose of natural caffeine,
+                    you get:
                   </p>
                   <ul className="space-y-2 text-sm font-bold text-gray-600 pl-4 border-l-2 border-slate-100 mb-6">
                     <li>
-                      • Foco equilibrado sem os picos e quedas do café comum
+                      • Balanced focus without the jitters and crashes of regular coffee
                     </li>
-                    <li>• Energia limpa e sustentada ao longo do dia</li>
-                    <li>• Estado de alerta relaxado, sem ansiedade</li>
+                    <li>• Clean, sustained energy throughout the day</li>
+                    <li>• Relaxed alertness, without anxiety</li>
                   </ul>
                   <p>
-                    Um estudo na <i>Nutritional Neuroscience</i> mostrou que a
-                    combinação de L-Theanine com cafeína melhorou
-                    significativamente a atenção e a velocidade de processamento
-                    em tarefas cognitivas.
+                    A study in <i>Nutritional Neuroscience</i> showed that the
+                    combination of L-Theanine with caffeine significantly
+                    improved attention and processing speed in cognitive tasks.
                   </p>
                   <div className="space-y-4 pt-4 text-gray-700">
                     {[
-                      "Seu humor fica mais estável, em vez de subir e descer o dia todo.",
-                      "Você se sente menos reativo. A sensação pesada e “algodão na cabeça” diminui, então você se sente mais presente com amigos e família.",
-                      "Pequenos estresses não te derrubam como costumavam. Você se recupera facilmente.",
-                      "Você passa o dia sem aquela sensação de “arrasto”. Mais energia e otimismo.",
+                      "Your mood becomes more stable, instead of going up and down all day.",
+                      "You feel less reactive. The heavy “cotton-head” feeling decreases, so you feel more present with friends and family.",
+                      "Small stresses don't take you down like they used to. You bounce back easily.",
+                      "You get through the day without that “dragged down” sensation. More energy and optimism.",
                     ].map((txt, i) => (
                       <li
                         key={i}
@@ -832,8 +817,8 @@ export default function Home_Page() {
                     ))}
                   </div>
                   <p className="text-sm italic text-gray-500 pt-8">
-                    Juntas, essas mudanças sutis mas poderosas fazem a vida
-                    parecer mais leve, mais calma e mais administrável.
+                    Together, these subtle but powerful changes make life feel
+                    lighter, calmer, and more manageable.
                   </p>
                 </div>
               </div>
@@ -844,40 +829,40 @@ export default function Home_Page() {
                   <AlertTriangle className="w-24 h-24" />
                 </div>
                 <h3 className="text-3xl font-black italic text-[#DFB277] mb-10">
-                  Por Que a Maioria Dos Produtos Falha
+                  Why Most Products Fail
                 </h3>
                 <div className="grid md:grid-cols-2 gap-10 text-gray-200">
                   <div className="space-y-6">
                     <h4 className="font-black text-red-400 uppercase tracking-widest text-xs">
-                      ❌ A Maioria Das Marcas Usa:
+                      ❌ Most Brands Use:
                     </h4>
                     <ul className="space-y-4 text-xs font-bold opacity-60">
-                      <li>• Pós de baixa dose</li>
-                      <li>• Micélio cultivado em grãos (amido)</li>
-                      <li>• Extração à base de álcool tóxico</li>
-                      <li>• Formas genéricas de vitaminas</li>
+                      <li>• Low dose powders</li>
+                      <li>• Mycelium grown on grain (starch)</li>
+                      <li>• Toxic alcohol-based extraction</li>
+                      <li>• Generic vitamin forms</li>
                     </ul>
                   </div>
                   <div className="space-y-6">
                     <h4 className="font-black text-green-400 uppercase tracking-widest text-xs">
-                      ✅ Axen NeuroFuel® Entrega:
+                      ✅ Axen NeuroFuel® Delivers:
                     </h4>
                     <ul className="space-y-4 text-xs font-bold">
                       <li className="flex gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
-                        Dose clínica por porção
+                        Clinical dose per serving
                       </li>
                       <li className="flex gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
-                        6 ingredientes sinérgicos
+                        6 synergistic ingredients
                       </li>
                       <li className="flex gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
-                        Extratos de corpo frutífero
+                        Fruiting body extracts
                       </li>
                       <li className="flex gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
-                        Formas ativas de vitaminas
+                        Active vitamin forms
                       </li>
                     </ul>
                   </div>
@@ -886,12 +871,12 @@ export default function Home_Page() {
 
               {/* PROTOCOL SECTION */}
               <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
-                O Protocolo NeuroRestore™
+                The NeuroRestore™ Protocol
               </h3>
               <p className="mb-10 text-gray-600 leading-relaxed">
-                O que torna o Axen NeuroFuel® diferente é que ele não é apenas
-                “mais um suplemento de memória”. É um system de três frentes
-                desenvolvido para atacar a causa raiz da fadiga neural:
+                What makes Axen NeuroFuel® different is that it’s not just
+                “another memory supplement.” It’s a three-pronged system
+                designed to attack the root cause of neural fatigue:
               </p>
 
               <div className="space-y-6 my-12 text-gray-700">
@@ -902,19 +887,19 @@ export default function Home_Page() {
                   </div>
                   <div className="space-y-4">
                     <h4 className="font-black text-[#1a2e2a] uppercase tracking-tight text-xl">
-                      🧠 FRENTE 1: NeuroRestore™ Signal
+                      🧠 PHASE 1: NeuroRestore™ Signal
                     </h4>
                     <p className="text-sm font-bold text-[#DFB277] uppercase tracking-widest">
-                      Reativa os sinais de crescimento neural
+                      Reactivates neural growth signals
                     </p>
                     <ul className="text-xs font-bold text-gray-500 space-y-1">
-                      <li>• Lion’s Mane (extrato padronizado)</li>
-                      <li>• Vitamina B9 (forma ativa - metilfolato)</li>
-                      <li>• Vitamina B12 (forma ativa - metilcobalamina)</li>
+                      <li>• Lion’s Mane (standardized extract)</li>
+                      <li>• Vitamin B9 (active form - methylfolate)</li>
+                      <li>• Vitamin B12 (active form - methylcobalamina)</li>
                     </ul>
                     <p className="italic text-gray-600 border-l-2 border-[#DFB277] pl-4 text-sm font-medium">
-                      “Diz ao cérebro: é seguro sair do modo economia. Você pode
-                      voltar a crescer.”
+                      “Tells the brain: it’s safe to exit power save mode. You
+                      can start growing again.”
                     </p>
                   </div>
                 </div>
@@ -926,18 +911,18 @@ export default function Home_Page() {
                   </div>
                   <div className="space-y-4">
                     <h4 className="font-black text-[#1a2e2a] uppercase tracking-tight text-xl">
-                      🛡️ FRENTE 2: NeuroRestore™ Shield
+                      🛡️ PHASE 2: NeuroRestore™ Shield
                     </h4>
                     <p className="text-sm font-bold text-[#2d5a4c] uppercase tracking-widest">
-                      Protege contra a corrosão do estresse
+                      Protects against stress corrosion
                     </p>
                     <ul className="text-xs font-bold text-gray-500 space-y-1">
-                      <li>• Rhodiola Rosea (extrato adaptógeno)</li>
-                      <li>• L-Theanine (aminoácido calmante)</li>
+                      <li>• Rhodiola Rosea (adaptogen extract)</li>
+                      <li>• L-Theanine (calming amino acid)</li>
                     </ul>
                     <p className="italic text-gray-600 border-l-2 border-[#2d5a4c] pl-4 text-sm font-medium">
-                      Bloqueia o impacto do cortisol e mantém o cérebro em
-                      estado seguro para reconstrução.
+                      Blocks the impact of cortisol and keeps the brain in a
+                      safe state for rebuilding.
                     </p>
                   </div>
                 </div>
@@ -949,20 +934,20 @@ export default function Home_Page() {
                   </div>
                   <div className="space-y-4">
                     <h4 className="font-black text-[#1a2e2a] uppercase tracking-tight text-xl">
-                      ⚡ FRENTE 3: NeuroRestore™ Sustain
+                      ⚡ PHASE 3: NeuroRestore™ Sustain
                     </h4>
                     <p className="text-sm font-bold text-emerald-600 uppercase tracking-widest">
-                      Sustenta clareza e foco no curto prazo
+                      Sustains clarity and focus in the short term
                     </p>
                     <ul className="text-xs font-bold text-gray-500 space-y-1">
-                      <li>• Alpha-GPC (precursor de acetilcolina)</li>
+                      <li>• Alpha-GPC (acetylcholine precursor)</li>
                       <li>
-                        • Cafeína natural de chá verde (microdose funcional)
+                        • Natural caffeine from green tea (functional microdose)
                       </li>
                     </ul>
                     <p className="italic text-gray-600 border-l-2 border-emerald-500 pl-4 text-sm font-medium">
-                      Você sente a diferença no dia a dia enquanto o reparo
-                      estrutural acontece ao fundo.
+                      You feel the difference day-to-day while the structural
+                      repair happens in the background.
                     </p>
                   </div>
                 </div>
@@ -971,30 +956,29 @@ export default function Home_Page() {
               {/* FINAL SUMMARY RECAP */}
               <div className="bg-[#1a2e2a] text-white p-10 rounded-xl space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm italic font-medium opacity-90 leading-relaxed">
-                  <p>Signal™ reativa os fatores de crescimento neural.</p>
-                  <p>Shield™ protege contra a corrosão do estresse moderno.</p>
+                  <p>Signal™ reactivates neural growth factors.</p>
+                  <p>Shield™ protects against the corrosion of modern stress.</p>
                   <p>
-                    Sustain™ mantém clareza mental enquanto a reconstrução
-                    acontece.
+                    Sustain™ maintains mental clarity while rebuilding happens.
                   </p>
                 </div>
                 <div className="pt-6 border-t border-white/10">
                   <p className="font-black text-[#DFB277] text-lg uppercase tracking-tight mb-2">
-                    Tudo em uma única fórmula.
+                    Everything in a single formula.
                   </p>
                   <p className="text-xs font-bold opacity-60 uppercase tracking-widest">
-                    Sem estimulantes agressivos. Sem efeitos colaterais. Por uma
-                    fração do preço de tratamentos clínicos.
+                    No harsh stimulants. No side effects. At a fraction of the
+                    cost of clinical treatments.
                   </p>
                 </div>
               </div>
 
               {/* WEEK BY WEEK - BLOG STYLE */}
               <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-24 mb-4">
-                Semana a Semana: O Que Eu Realmente Senti
+                Week by Week: What I Actually Felt
               </h3>
               <p className="text-lg text-gray-500 italic mb-12 border-l-4 border-[#2d5a4c] pl-6 font-medium">
-                Quando Finalmente Dei ao Meu Cérebro O Que Ele Estava Implorando
+                When I Finally Gave My Brain What It Was Begging For
               </p>
 
               <div className="space-y-10 my-12 text-gray-700">
@@ -1002,39 +986,38 @@ export default function Home_Page() {
                 <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
                   <div className="bg-[#f0f4f3] px-8 py-4 border-b border-gray-100 flex justify-between items-center">
                     <h4 className="font-black text-[#2d5a4c] uppercase tracking-[0.2em] text-[10px]">
-                      DIÁRIO DE CAMPO
+                      FIELD DIARY
                     </h4>
                     <span className="text-emerald-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">
-                      <Clock className="w-3 h-3" /> SEMANA 1
+                      <Clock className="w-3 h-3" /> WEEK 1
                     </span>
                   </div>
                   <div className="p-8 space-y-6">
                     <h5 className="text-xl font-black text-[#1a2e2a] italic">
-                      🟢 SEMANA 1: A Névoa Começa a Clarear
+                      🟢 WEEK 1: The Fog Starts to Clear
                     </h5>
                     <p className="leading-relaxed">
-                      Na primeira manhã, tomei o pó junto ao meu café da manhã
-                      esperando nada. Mas em algum lugar entre o café da manhã e
-                      o almoço, algo… muda. A névoa mental não desaparece, mas o
-                      ruído diminui.
+                      On the first morning, I took the powder with my breakfast
+                      expecting nothing. But somewhere between breakfast and
+                      lunch, something… shifts. The brain fog doesn't disappear,
+                      but the noise drops.
                     </p>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
-                          Não estou mais pulando entre abas como um esquilo
-                          cafeinado
+                          I'm no longer jumping between tabs like a caffeinated
+                          squirrel
                         </span>
                       </li>
                       <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0 mt-0.5" />
-                        <span>Acidentalmente pulo meu café da tarde</span>
+                        <span>I accidentally skip my afternoon coffee</span>
                       </li>
                       <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <CheckCircle className="text-emerald-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
-                          Consigo passar pela caixa de entrada sem me desligar
-                          mentalmente
+                          I'm able to get through my inbox without zoning out
                         </span>
                       </li>
                     </ul>
@@ -1045,39 +1028,39 @@ export default function Home_Page() {
                 <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
                   <div className="bg-blue-50/50 px-8 py-4 border-b border-gray-100 flex justify-between items-center">
                     <h4 className="font-black text-blue-600 uppercase tracking-[0.2em] text-[10px]">
-                      CONEXÕES REATIVADAS
+                      REACTIVATED CONNECTIONS
                     </h4>
                     <span className="text-blue-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">
-                      <Clock className="w-3 h-3" /> SEMANA 2
+                      <Clock className="w-3 h-3" /> WEEK 2
                     </span>
                   </div>
                   <div className="p-8 space-y-6">
                     <h5 className="text-xl font-black text-[#1a2e2a] italic">
-                      🟢 SEMANA 2: Algo Está Clicando
+                      🟢 WEEK 2: Something is Clicking
                     </h5>
                     <p className="leading-relaxed">
-                      Na Semana 2, começo a notar mudanças semelhantes ao que os
-                      participantes dos estudos relatam — melhor foco,
-                      transições mais suaves e menos fadiga mental.
+                      By Week 2, I start noticing changes similar to what
+                      study participants report — better focus, smoother
+                      transitions, and less mental fatigue.
                     </p>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <CheckCircle className="text-blue-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
-                          Reorganizo aquele armário que estava evitando há
-                          semanas
+                          I reorganize that closet I've been avoiding for weeks
                         </span>
                       </li>
                       <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <CheckCircle className="text-blue-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
-                          Menos momentos de “espera… o que eu estava dizendo?”
+                          Fewer moments of "wait... what was I saying?"
                         </span>
                       </li>
                       <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <CheckCircle className="text-blue-500 w-5 h-5 shrink-0 mt-0.5" />
                         <span>
-                          Realmente flui de uma tarefa para outra — sem travar
+                          I actually flow from one task to another — without
+                          getting stuck
                         </span>
                       </li>
                     </ul>
@@ -1088,19 +1071,19 @@ export default function Home_Page() {
                 <div className="bg-white rounded-xl border border-gray-200 overflow-hidden border-t-4 border-t-[#DFB277]">
                   <div className="bg-[#fdfbf7] px-8 py-4 border-b border-gray-100 flex justify-between items-center">
                     <h4 className="font-black text-[#a8824f] uppercase tracking-[0.2em] text-[10px]">
-                      O REBOOT FINAL
+                      THE FINAL REBOOT
                     </h4>
                     <span className="text-[#a8824f] font-black text-[10px] uppercase tracking-widest flex items-center gap-2">
-                      <Clock className="w-3 h-3" /> SEMANAS 3–4
+                      <Clock className="w-3 h-3" /> WEEKS 3–4
                     </span>
                   </div>
                   <div className="p-8 space-y-6">
                     <h5 className="text-xl font-black text-[#1a2e2a] italic">
-                      🟢 SEMANAS 3–4: Meu Cérebro, Reiniciado
+                      🟢 WEEKS 3–4: My Brain, Rebooted
                     </h5>
                     <p className="leading-relaxed">
-                      Na Semana 4, experimento resultados semelhantes aos
-                      relatados nos estudos:
+                      By Week 4, I experience results similar to those
+                      reported in the studies:
                     </p>
                     <ul className="space-y-4">
                       <li className="flex items-center gap-4 group">
@@ -1108,8 +1091,7 @@ export default function Home_Page() {
                           <Heart className="w-5 h-5 text-[#DFB277]" />
                         </div>
                         <p className="text-sm font-bold italic">
-                          Meu marido diz que pareço “menos frita” e mais
-                          presente
+                          My husband says I seem “less fried” and more present
                         </p>
                       </li>
                       <li className="flex items-center gap-4 group">
@@ -1117,14 +1099,14 @@ export default function Home_Page() {
                           <Quote className="w-5 h-5 text-[#DFB277]" />
                         </div>
                         <p className="text-sm font-bold italic">
-                          No jantar com amigos, me sinto como a pessoa engraçada
-                          de novo
+                          At dinner with friends, I feel like the funny person
+                          again
                         </p>
                       </li>
                     </ul>
                     <p className="text-center py-6 bg-slate-50 rounded-xl border border-slate-100 text-lg font-black text-[#1a2e2a] italic">
-                      "Não é um transplante de personalidade. Sou só eu, mas
-                      mais clara."
+                      "It's not a personality transplant. It's just me, but
+                      clearer."
                     </p>
                   </div>
                 </div>
@@ -1133,40 +1115,40 @@ export default function Home_Page() {
               {/* TESTIMONIALS SECTION */}
               <div id="reviews" className="pt-20 text-gray-700">
                 <h3 className="text-3xl font-black italic text-[#1a2e2a] mb-6 text-center uppercase tracking-tighter">
-                  O Que Outros Estão Dizendo
+                  What Others Are Saying
                 </h3>
                 <p className="max-w-2xl mx-auto text-center text-gray-600 mb-12 italic font-medium leading-relaxed px-4">
-                  Eu sei o que você está pensando: “Esses depoimentos são
-                  reais?” Honestamente, eu me perguntei a mesma coisa — até eu
-                  mesma testar o suplemento e sentir exatamente o que as pessoas
-                  estavam descrevendo.
+                  I know what you're thinking: “Are these testimonials real?”
+                  Honestly, I wondered the same thing — until I tested the
+                  supplement myself and felt exactly what people were
+                  describing.
                 </p>
                 <div className="space-y-6">
                   {[
                     {
                       name: "Mary J.",
-                      info: "53 anos, menopausa",
-                      text: "Adoro esse suplemento! Primeiro, é fácil de tomar e não tem gosto ruim. Me sinto muito mais clara aos 53 anos e no meio da menopausa faz diferença! Juro por ele e não vou ficar sem, nem por um dia.",
+                      info: "53 years old, menopause",
+                      text: "I love this supplement! First, it's easy to take and doesn't taste bad. I feel so much clearer at 53 and in the middle of menopause it makes a difference! I swear by it and won't go a day without it.",
                     },
                     {
                       name: "James M.",
                       info: "",
-                      text: "Melhor suplemento de memory que já usei. Definitivamente faz o que diz. Mais energia, mais foco mental. Vou pedir de novo. Tenho contado para todo mundo que encontro para experimentar.",
+                      text: "Best memory supplement I've ever used. Definitely does what it says. More energy, more mental focus. I'll be ordering again. I've been telling everyone I meet to try it.",
                     },
                     {
                       name: "Robert L.",
                       info: "",
-                      text: "Eles são ótimos! Axen não é mágica, mas funciona para nivelar meu foco de uma forma que eu realmente tomo ação na minha lista de tarefas antes que o esquilo dentro de mim diga para fazer outra coisa. É sutil mas eficaz.",
+                      text: "These are great! Axen isn't magic, but it works to level out my focus in a way that I actually take action on my to-do list before the squirrel inside me tells me to do something else. It's subtle but effective.",
                     },
                     {
                       name: "John P.",
-                      info: "76 anos",
-                      text: "Surpreendido. Eu estava cético, mas fiquei surpreso com uma melhora distinta na minha memória e clareza mental após apenas algumas semanas. Consigo lembrar sequências de números agora, e não pareço ficar tão confuso na vida diária. Boa notícia aos 76!",
+                      info: "76 years old",
+                      text: "Surprised. I was skeptical, but was surprised by a distinct improvement in my memory and mental clarity after just a few weeks. I can remember number sequences now, and don't seem to get as confused in daily life. Good news at 76!",
                     },
                     {
                       name: "Jeff R.",
                       info: "",
-                      text: "Senti diferença em poucos dias. Depois de tomar por duas semanas, estou impressionado como minha névoa mental praticamente sumiu, e minha energia está nas alturas… meus amigos notaram a diferença e estão experimentando agora… até agora eles também estão impressionados.",
+                      text: "Felt a difference in just a few days. After taking it for two weeks, I'm impressed how my brain fog is practically gone, and my energy is through the roof… my friends noticed the difference and are trying it now… so far they're also impressed.",
                     },
                   ].map((rev, i) => (
                     <div
@@ -1194,7 +1176,7 @@ export default function Home_Page() {
                           <div className="bg-green-600 p-0.5 rounded-xl">
                             <CheckCircle className="w-2.5 h-2.5 text-white" />
                           </div>
-                          Cliente Verificado
+                          Verified Customer
                         </div>
                       </div>
                     </div>
@@ -1205,18 +1187,18 @@ export default function Home_Page() {
               {/* WHAT YOU GET */}
               <div className="my-24 bg-white p-12 rounded-xl border border-gray-200 text-gray-700">
                 <h3 className="text-2xl font-black mb-2 italic uppercase tracking-tighter">
-                  O Que Você Está Realmente Recebendo
+                  What You're Actually Getting
                 </h3>
                 <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-10">
-                  Tudo incluído em cada pote:
+                  Everything included in every tub:
                 </p>
                 <div className="grid md:grid-cols-1 gap-6">
                   {[
-                    "Suprimento completo de 30 dias — 30 doses, 1 por dia é tudo que você precisa",
-                    "6 Ingredientes Clínicos — Lion’s Mane, Alpha-GPC, Rhodiola Rosea, L-Theanine, Vitamina B9, Vitamina B12",
-                    "Dose Clínica Por Porção — Uma quantidade clinicamente significativa de compostos funcionais",
-                    "Ingredientes Limpos — Vegano, sem glúten, sem OGM. Fabricado em instalação certificada",
-                    "Saboroso & Fácil — Prazer ao tomar. Facilidade. Pode ser usado com sua bebida favorita.",
+                    "Full 30-day supply — 30 servings, 1 per day is all you need",
+                    "6 Clinical Ingredients — Lion’s Mane, Alpha-GPC, Rhodiola Rosea, L-Theanine, Vitamin B9, Vitamin B12",
+                    "Clinical Dose Per Serving — A clinically significant amount of functional compounds",
+                    "Clean Ingredients — Vegan, gluten-free, non-GMO. Manufactured in certified facility",
+                    "Tasty & Easy — Pleasant to take. Ease of use. Can be used with your favorite beverage.",
                   ].map((it, i) => (
                     <div
                       key={i}
@@ -1231,10 +1213,10 @@ export default function Home_Page() {
 
               {/* HOW TO USE */}
               <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
-                Como Eu Uso?
+                How Do I Use It?
               </h3>
               <p className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-12">
-                A rotina simples, aprovada por nutricionista
+                The simple routine, nutritionist-approved
               </p>
               <div className="grid md:grid-cols-1 gap-8 my-12 text-gray-700">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1243,10 +1225,10 @@ export default function Home_Page() {
                       1
                     </div>
                     <h4 className="font-black text-lg">
-                      Tome uma scoop pela manhã
+                      Take one scoop in the morning
                     </h4>
                     <p className="text-xs text-gray-500 font-medium leading-relaxed">
-                      De preferência com o café da manhã. Simples assim.
+                      Preferably with breakfast. It’s that simple.
                     </p>
                   </div>
                   <div className="space-y-4 bg-white p-8 rounded-xl border border-gray-100">
@@ -1254,11 +1236,11 @@ export default function Home_Page() {
                       2
                     </div>
                     <h4 className="font-black text-lg">
-                      Mantenha o pote em algum lugar visível
+                      Keep the tub somewhere visible
                     </h4>
                     <p className="text-xs text-gray-500 font-medium leading-relaxed">
-                      Ao lado da sua garrafa de água ou do laptop — em qualquer
-                      lugar que sua rotina te leve.
+                      Next to your water bottle or laptop — anywhere your
+                      routine takes you.
                     </p>
                   </div>
                   <div className="space-y-4 bg-white p-8 rounded-xl border border-gray-100">
@@ -1266,11 +1248,11 @@ export default function Home_Page() {
                       3
                     </div>
                     <h4 className="font-black text-lg">
-                      Seja consistente (chato, mas funciona)
+                      Be consistent (boring, but it works)
                     </h4>
                     <p className="text-xs text-gray-500 font-medium leading-relaxed">
-                      Os estudos duraram 8 semanas. A maioria nota mudanças por
-                      volta da Semana 2–4.
+                      The studies lasted 8 weeks. Most notice changes around
+                      Weeks 2–4.
                     </p>
                   </div>
                   <div className="space-y-6 bg-[#f0f4f3] p-8 rounded-xl border border-[#2d5a4c]/10">
@@ -1279,16 +1261,16 @@ export default function Home_Page() {
                         4
                       </div>
                       <h4 className="font-black text-lg">
-                        Observe os primeiros ganhos
+                        Watch for the early wins
                       </h4>
                     </div>
                     <ul className="grid grid-cols-1 gap-2">
                       {[
-                        "Menos travadas cerebrais",
-                        "Foco mais suave",
-                        "Energia mais estável",
-                        "Transições mais fáceis entre tarefas",
-                        "Menos daquela névoa pesada e “algodoada”",
+                        "Fewer brain freezes",
+                        "Smoother focus",
+                        "More stable energy",
+                        "Easier transitions between tasks",
+                        "Less of that heavy, “cotton-like” fog",
                       ].map((gain, i) => (
                         <li
                           key={i}
@@ -1306,20 +1288,20 @@ export default function Home_Page() {
               {/* VERDICT SECTION */}
               <div className="my-24 py-20 px-10 bg-[#fdfbf7] rounded-xl border-2 border-[#DFB277]/10 text-center">
                 <h3 className="text-4xl font-black mb-8 italic text-[#1a2e2a]">
-                  O Veredicto
+                  The Verdict
                 </h3>
                 <p className="text-2xl font-black text-[#a8824f] mb-12 italic leading-tight">
-                  "Eu Entrei Cética. Saí Engolindo Minhas Palavras — E Querendo
-                  a Próxima Dose."
+                  "I Came In Skeptical. I Left Eating My Words — And Wanting
+                  The Next Dose."
                 </p>
 
                 <div className="max-w-2xl mx-auto text-gray-700 text-left mb-16 space-y-6 text-sm leading-relaxed italic">
                   <p>
-                    Eu chequei os dados clínicos. Eu chequei as proporções de
-                    extração. Eu chequei os testes de qualidade. E então eu
-                    chequei meu próprio cérebro.
+                    I checked the clinical data. I checked the extraction
+                    ratios. I checked the quality testing. And then I checked
+                    my own brain.
                   </p>
-                  <p>A mudança foi real.</p>
+                  <p>The shift was real.</p>
                 </div>
 
                 <div className="bg-white p-12 rounded-xl inline-block border border-gray-200 shadow-xl shadow-black/5">
@@ -1334,13 +1316,13 @@ export default function Home_Page() {
                     4.6 / 5
                   </p>
                   <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em]">
-                    Avaliação Oficial Sarah Mitchell
+                    Official Sarah Mitchell Rating
                   </p>
                 </div>
 
                 <p className="mt-16 text-lg text-gray-600 max-w-xl mx-auto leading-relaxed italic">
-                  "A fórmula merece 5. A única razão de não ser perfeita?
-                  Problemas de disponibilidade."
+                  "The formula deserves a 5. The only reason it's not perfect?
+                  Availability issues."
                 </p>
 
                 <div className="mt-12 bg-[#1a2e2a] text-white p-10 rounded-xl text-left relative overflow-hidden">
@@ -1348,17 +1330,16 @@ export default function Home_Page() {
                     <Brain className="w-24 h-24" />
                   </div>
                   <p className="text-xs font-black uppercase tracking-[0.3em] text-[#DFB277] mb-6">
-                    Resumo da Especialista
+                    Expert Summary
                   </p>
                   <p className="text-base font-medium italic opacity-90 leading-relaxed mb-4">
-                    "Se você quer pensamento mais claro, foco mais estável e um
-                    ritual diário que parece mais um cuidado do que uma
-                    obrigação, dê ao Axen NeuroFuel® 8 semanas."
+                    "If you want clearer thinking, more stable focus, and a
+                    daily ritual that feels more like self-care than a chore,
+                    give Axen NeuroFuel® 8 weeks."
                   </p>
                   <p className="text-sm font-bold border-t border-white/10 pt-6 mt-6 opacity-60">
-                    Este poderoso suplemento diário entrega pensamento mais
-                    limpo e energia mais suave — sem pílulas gigantes ou gosto
-                    ruim.
+                    This powerful daily supplement delivers cleaner thinking and
+                    smoother energy — without giant pills or a bad taste.
                   </p>
                 </div>
               </div>
@@ -1369,23 +1350,22 @@ export default function Home_Page() {
                   <AlertTriangle className="w-20 h-20 text-red-600" />
                 </div>
                 <h4 className="flex items-center gap-3 text-red-700 font-black uppercase tracking-widest text-xs mb-8">
-                  <AlertTriangle className="w-5 h-5" /> Aviso Rápido Sobre o
-                  Estoque
+                  <AlertTriangle className="w-5 h-5" /> Quick Warning About Stock
                 </h4>
                 <div className="space-y-6 italic leading-relaxed">
                   <p>
-                    Enquanto finalizava este artigo, recebi uma mensagem de
-                    alguém da equipe Axen:
+                    While finalizing this article, I received a message from
+                    someone on the Axen team:
                   </p>
                   <blockquote className="bg-white/50 p-8 rounded-xl border-l-4 border-red-400 text-red-800 font-bold">
-                    “Nossa última promoção esgotou a maior parte do nosso
-                    estoque. Reservamos um pequeno lote apenas para seus
-                    leitores — mas uma vez que esses acabarem, não podemos
-                    garantir que estarão de volta antes do próximo mês.”
+                    “Our last promotion sold out most of our stock. We’ve
+                    reserved a small batch just for your readers — but once
+                    these are gone, we can't guarantee they'll be back before
+                    next month.”
                   </blockquote>
                   <p className="text-sm opacity-60">
-                    Para constar: raramente recebo mensagens assim — por isso
-                    estou passando adiante.
+                    For the record: I rarely get messages like this — which is
+                    why I'm passing it on.
                   </p>
                 </div>
               </div>
@@ -1393,17 +1373,16 @@ export default function Home_Page() {
               {/* GUARANTEE DETAIL */}
               <div className="my-24 space-y-10 text-gray-700">
                 <h3 className="text-3xl font-black italic text-[#1a2e2a]">
-                  E Se Eu Não Sentir Nada?
+                  What If I Don't Feel Anything?
                 </h3>
                 <p className="leading-relaxed">
-                  Axen oferece uma garantia de 30 dias de devolução do dinheiro
-                  no seu primeiro pedido.
+                  Axen offers a 30-day money-back guarantee on your first order.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6">
                   {[
-                    "Se você não notar diferença…",
-                    "Se o suplemento não parecer certo para você…",
-                    "Ou mesmo se você simplesmente não gostar…",
+                    "If you don't notice a difference…",
+                    "If the supplement doesn't seem right for you…",
+                    "Or even if you simply don't like it…",
                   ].map((cond, i) => (
                     <div
                       key={i}
@@ -1414,18 +1393,17 @@ export default function Home_Page() {
                   ))}
                 </div>
                 <p className="leading-relaxed">
-                  Você pode enviar um email para{" "}
-                  <strong>suporte@axen.com</strong> dentro de 30 dias e
-                  solicitar reembolso.
+                  You can email <strong>support@axen.com</strong> within 30
+                  days and request a refund.
                 </p>
                 <div className="bg-[#f0f4f3] p-10 rounded-xl border border-[#2d5a4c]/10 text-center">
                   <p className="text-xl font-black text-[#2d5a4c] italic mb-6">
-                    Sem obstáculos. Sem formulários complicados. Sem perguntas.
+                    No hurdles. No complicated forms. No questions asked.
                   </p>
                   <p className="text-sm font-medium opacity-60">
-                    Como alguém que testou centenas de suplementos, posso te
-                    dizer isso: uma empresa que oferece uma garantia real de 30
-                    dias é uma empresa que confia na sua fórmula.
+                    As someone who has tested hundreds of supplements, I can
+                    tell you this: a company that offers a real 30-day
+                    guarantee is a company that trusts its formula.
                   </p>
                 </div>
               </div>
@@ -1442,18 +1420,18 @@ export default function Home_Page() {
                 <AlertTriangle className="w-12 h-12 text-red-600" />
               </div>
               <p className="text-[10px] font-black uppercase tracking-[0.3em] text-red-700 mb-4">
-                Aviso de Estoque
+                Stock Warning
               </p>
               <h4 className="text-xl font-bold mb-4 italic text-red-800">
-                Mensagem da Equipe Axen
+                Message from the Axen Team
               </h4>
               <p className="text-xs text-red-700/70 leading-relaxed mb-6 italic">
-                “Nossa última promoção esgotou a maior parte do nosso estoque.
-                Reservamos um pequeno lote apenas para seus leitores.”
+                “Our last promotion sold out most of our stock. We’ve
+                reserved a small batch just for your readers.”
               </p>
               <div className="flex items-center gap-3 text-red-600 font-black text-[10px] uppercase tracking-widest">
                 <div className="w-2 h-2 rounded-xl bg-red-600 animate-ping"></div>
-                Lote Limitado Disponível
+                Limited Batch Available
               </div>
             </div>
           </aside>
@@ -1464,18 +1442,18 @@ export default function Home_Page() {
       <section id="cta" className="bg-[#1a2e2a] py-32 px-4 text-white">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block bg-[#DFB277] text-[#1a2e2a] px-8 py-3 rounded-xl font-black text-xs uppercase tracking-[0.4em] mb-12">
-            Seu Próximo Passo
+            Your Next Step
           </div>
 
           <h2 className="text-4xl md:text-6xl font-black mb-16 italic leading-tight font-playfair">
-            Então Faz Sentido Experimentar?
+            So Does It Make Sense To Try?
           </h2>
 
           <p className="text-xl md:text-2xl text-white/70 mb-20 font-light max-w-3xl mx-auto leading-relaxed">
-            Deixa eu te perguntar isso. Se apenas duas cápsulas por dia te
-            ajudassem a se sentir mais claro, mais calmo e mais focado — sem a
-            queda, a agitação ou o arrasto mental — como seria realmente o seu
-            dia? Quanto mais você conseguiria fazer com esse suporte?
+            Let me ask you this. If just two capsules a day helped you feel
+            clearer, calmer, and more focused — without the crash, the
+            jitters, or the mental drag — what would your day actually look
+            like? How much more could you achieve with that support?
           </p>
 
           <div className="bg-white text-[#1a2e2a] rounded-xl p-10 md:p-20 relative overflow-hidden text-left">
@@ -1497,8 +1475,8 @@ export default function Home_Page() {
                 <div>
                   <h3 className="text-4xl font-black mb-4">Axen NeuroFuel®</h3>
                   <p className="text-gray-400 font-bold uppercase tracking-widest text-xs italic">
-                    Agora que você viu a pesquisa e os resultados, este é o
-                    momento natural para experimentar.
+                    Now that you've seen the research and the results, this is
+                    the natural moment to try.
                   </p>
                 </div>
 
@@ -1506,19 +1484,19 @@ export default function Home_Page() {
                   {[
                     {
                       icon: <Zap className="w-5 h-5 text-emerald-500" />,
-                      text: "Os descontos ainda estão ativos",
+                      text: "Discounts are still active",
                     },
                     {
                       icon: <Gift className="w-5 h-5 text-blue-500" />,
-                      text: "Presentes extras incluídos no seu pedido",
+                      text: "Extra gifts included with your order",
                     },
                     {
                       icon: <Clock className="w-5 h-5 text-[#DFB277]" />,
-                      text: "E o estoque ainda está disponível",
+                      text: "And stock is still available",
                     },
                     {
                       icon: <ShieldCheck className="w-5 h-5 text-[#2d5a4c]" />,
-                      text: "MAIS 30 dias para experimentar sem risco",
+                      text: "PLUS 30 days to try risk-free",
                     },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-4">
@@ -1530,20 +1508,20 @@ export default function Home_Page() {
 
                 <div className="bg-[#fdfbf7] p-10 rounded-xl border-2 border-[#DFB277]/20 relative">
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#DFB277] text-white px-6 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
-                    🔥 Oferta Por Tempo Limitado
+                    🔥 Limited Time Offer
                   </div>
                   <div className="flex items-baseline gap-4 mb-10 mt-4 justify-center">
                     <span className="text-5xl font-black tracking-tighter">
-                      R$ 178,20
+                      $ 178.20
                     </span>
                     <span className="text-gray-400 font-bold uppercase tracking-widest text-xs">
-                      / pote
+                      / tub
                     </span>
                   </div>
                   <button className="w-full bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-7 rounded-xl text-xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95 group uppercase tracking-tight">
-                    <span>VERIFICAR DISPONIBILIDADE</span>
+                    <span>CHECK AVAILABILITY</span>
                     <span className="text-[10px] opacity-60 font-black">
-                      Verificar estoque agora →
+                      Check stock now →
                     </span>
                   </button>
                   <div className="mt-8 flex justify-center gap-2">
@@ -1567,7 +1545,7 @@ export default function Home_Page() {
 
                 <div className="space-y-4">
                   <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em] text-center">
-                    Expiração da Oferta:
+                    Offer Expiration:
                   </p>
                   <CountdownTimer />
                 </div>
@@ -1582,27 +1560,27 @@ export default function Home_Page() {
                 <ShieldCheck className="w-40 h-40 text-[#DFB277]" />
               </div>
               <h4 className="text-3xl font-black mb-10 italic text-[#DFB277]">
-                30 Dias ou Seu Dinheiro de Volta
+                30 Days or Your Money Back
               </h4>
               <p className="opacity-70 text-lg leading-relaxed mb-12 font-light italic text-gray-200">
-                "Se você não notar diferença, se o suplemento não parecer certo
-                para você, ou mesmo se você simplesmente não gostar... você pode
-                enviar um email para suporte@axen.com e solicitar reembolso. Sem
-                obstáculos. Sem perguntas."
+                "If you don't notice a difference, if the supplement doesn't
+                seem right for you, or even if you simply don't like it... you
+                can email support@axen.com and request a refund. No hurdles. No
+                questions asked."
               </p>
               <div className="flex items-center gap-4 justify-center opacity-40">
                 <Lock className="w-4 h-4" />
                 <p className="text-[10px] font-black uppercase tracking-[0.3em]">
-                  Criptografia SSL de 256 bits
+                  256-bit SSL Encryption
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* FOOTER */}
-      <footer className="bg-[#111] text-white/30 py-24 px-4 text-center">
+      < footer className="bg-[#111] text-white/30 py-24 px-4 text-center" >
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="flex items-center justify-center gap-3">
             <img
@@ -1614,50 +1592,50 @@ export default function Home_Page() {
 
           <div className="flex flex-wrap justify-center gap-12 text-[10px] font-black uppercase tracking-[0.4em]">
             <a href="#" className="hover:text-[#DFB277] transition-colors">
-              Privacidade
+              Privacy
             </a>
             <a href="#" className="hover:text-[#DFB277] transition-colors">
-              Termos de Uso
+              Terms of Use
             </a>
             <a href="#" className="hover:text-[#DFB277] transition-colors">
-              Contato
+              Contact
             </a>
             <a href="#" className="hover:text-[#DFB277] transition-colors">
-              Estudos Clínicos
+              Clinical Studies
             </a>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6 text-[9px] font-bold uppercase tracking-[0.25em] leading-relaxed opacity-40">
             <p>
-              * As afirmações contidas neste site não foram avaliadas pela
-              ANVISA ou FDA. Este produto não se destina a diagnosticar, tratar,
-              curar ou prevenir qualquer doença.
+              * The statements contained on this site have not been evaluated
+              by the FDA. This product is not intended to diagnose, treat,
+              cure, or prevent any disease.
             </p>
             <p>
-              © 2025 AXEN NUTRITION • BRAZILIAN COGNITIVE RESEARCH • TODOS OS
-              DIREITOS RESERVADOS
+              © 2025 AXEN NUTRITION • BRAZILIAN COGNITIVE RESEARCH • ALL RIGHTS
+              RESERVED
             </p>
           </div>
         </div>
-      </footer>
+      </footer >
 
       {/* MOBILE STICKY BUTTON */}
-      <div className="md:hidden fixed bottom-8 left-8 right-8 z-50">
+      < div className="md:hidden fixed bottom-8 left-8 right-8 z-50" >
         <a
           href="#cta"
           className="bg-[#2d5a4c] text-white flex items-center justify-between p-6 rounded-xl border border-white/20 active:scale-95 transition-all shadow-2xl"
         >
           <div className="flex flex-col text-left">
             <span className="text-[9px] uppercase font-black tracking-widest text-[#DFB277] mb-1">
-              Garantir Lote Reservado
+              Secure Reserved Batch
             </span>
             <span className="font-black text-xl font-playfair italic">
-              Verificar NeuroFuel®
+              Check NeuroFuel®
             </span>
           </div>
           <ChevronRight className="w-8 h-8" />
         </a>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }
