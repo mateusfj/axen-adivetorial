@@ -147,13 +147,13 @@ export default function Home_Page() {
   }, []);
 
   return (
-    <div className="min-h-screen  text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]">
+    <div className="min-h-screen overflow-hidden text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-4 py-8 md:py-12">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-start">
           {/* CONTENT SECTION (Left) */}
-          <article className="flex-1 max-w-3xl order-2 lg:order-1">
+          <article className="w-full lg:flex-1 max-w-3xl order-2 lg:order-1">
             {/* HERO HEADLINE */}
             <header className="mb-12">
               <div className="flex flex-wrap items-center gap-4 mb-8">

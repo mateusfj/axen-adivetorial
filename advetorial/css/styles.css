@@ -212,6 +212,7 @@
   }
   html,
   :host {
+    overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
     line-height: 1.5;
@@ -688,6 +689,7 @@
   }
   .min-h-screen {
     min-height: 100vh;
+    overflow: hidden;
   }
   .w-2 {
     width: calc(var(--spacing) * 2);
