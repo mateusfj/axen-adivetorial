@@ -689,7 +689,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-    overflow: hidden;
   }
   .w-2 {
     width: calc(var(--spacing) * 2);
