@@ -374,7 +374,7 @@ export default function Home_Page() {
 
               <div className="relative rounded-xl overflow-hidden mb-12 border-4 border-white">
                 <img
-                  src="/images/mental-fog-senior.png"
+                  src="/images/mental-fog-senior.jpg"
                   alt="Senior forgetting something"
                   className="w-full object-cover aspect-video grayscale contrast-125"
                 />
