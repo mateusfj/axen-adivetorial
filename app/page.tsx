@@ -31,7 +31,7 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const Navbar: React.FC = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-3 px-4">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center">
         <a href={`${BASE_PATH}/`} className="flex items-center gap-2">
           <img
             src={`${BASE_PATH}/images/logo.png`}
@@ -153,12 +153,12 @@ export default function Home_Page() {
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-4 py-8 md:py-12">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-start">
+        <div className="flex flex-col items-center lg:items-start lg:flex-row gap-8 lg:gap-16">
           {/* CONTENT SECTION (Left) */}
-          <article className="w-full lg:flex-1 max-w-3xl order-2 lg:order-1">
+          <article className="w-full lg:flex-1 max-w-3xl order-1">
             {/* HERO HEADLINE */}
-            <header className="mb-12">
-              <div className="flex flex-wrap items-center gap-4 mb-8">
+            <header className="mb-12 text-center lg:text-left flex flex-col items-center lg:items-start">
+              <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 mb-8">
                 <span className="inline-flex items-center px-4 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] bg-[#DFB277]/10 text-[#a8824f] border border-[#DFB277]/20">
                   <Eye className="w-3.5 h-3.5 mr-2" /> 8,547 people reading now
                 </span>
@@ -167,12 +167,12 @@ export default function Home_Page() {
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-8 font-playfair italic text-[#1a2e2a]">
+              <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold leading-[1.1] mb-8 font-playfair italic text-[#1a2e2a]">
                 What If I Told You That A Simple Mushroom Could Eliminate
                 Brain Fog and Increase Focus by 64%?
               </h1>
 
-              <h2 className="text-xl md:text-2xl text-gray-500 font-light mb-12 italic border-l-4 border-[#DFB277] pl-8">
+              <h2 className="text-sm md:text-lg text-gray-500 font-light mb-12 italic border-l-4 lg:border-l-4 border-[#DFB277] pl-8">
                 I Also Thought It Was A Scam — So I Decided To Test It Myself.
               </h2>
 
@@ -194,7 +194,7 @@ export default function Home_Page() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-5 border-t border-b border-gray-100 py-8 mb-16">
+              <div className="flex flex-col md:flex-row items-center gap-5 border-t border-b border-gray-100 py-8 mb-16 w-full text-center md:text-left">
                 <div className="w-16 h-16 rounded-xl border-2 border-[#DFB277] overflow-hidden shrink-0">
                   <img
                     src={`${BASE_PATH}/images/woman-icon.png`}
@@ -214,11 +214,16 @@ export default function Home_Page() {
                   </p>
                 </div>
               </div>
+
+              {/* Mobile Sidebar - Appears after Bio */}
+              <div className="lg:hidden mb-12">
+                <ProductSidebarCard />
+              </div>
             </header>
 
             {/* INTRO TEXT */}
-            <section className="prose prose-lg text-gray-700 max-w-none space-y-8 leading-relaxed">
-              <h3 className="text-3xl font-black text-[#DFB277] italic leading-tight">
+            <section className="prose prose-sm md:prose-base text-gray-700 max-w-none space-y-8 leading-relaxed">
+              <h3 className="text-xl font-black text-[#DFB277] italic leading-tight">
                 I Swore This Was Another One Of Those Internet "Tricks"
                 (Honey Trick, Pink Salt Trick) But No — See How I Had
                 To Eat My Words
@@ -280,7 +285,7 @@ export default function Home_Page() {
               {/* CLINICAL TABLE */}
               <div className="my-16 bg-white rounded-xl border border-gray-200 overflow-hidden">
                 <div className="bg-[#2d5a4c] p-8 text-white">
-                  <h4 className="text-2xl font-black italic text-[#DFB277]">
+                  <h4 className="text-xl font-black italic text-[#DFB277]">
                     Proven Clinical Results
                   </h4>
                   <p className="text-xs font-bold uppercase tracking-widest opacity-80 mt-2">
@@ -330,7 +335,7 @@ export default function Home_Page() {
                             {item.label}
                           </td>
                           <td className="px-8 py-6 text-right">
-                            <span className="text-3xl font-black text-[#1a2e2a]">
+                            <span className="text-2xl font-black text-[#1a2e2a]">
                               {item.val}
                             </span>
                           </td>
@@ -370,7 +375,7 @@ export default function Home_Page() {
               </div>
 
               {/* STORY SECTION */}
-              <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
+              <h3 className="text-xl font-black italic text-[#1a2e2a] pt-12">
                 The Mental Lapse That Made Me Break Down
               </h3>
 
@@ -436,7 +441,7 @@ export default function Home_Page() {
                 </p>
               </div>
 
-              <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
+              <h3 className="text-xl font-black italic text-[#1a2e2a] pt-12">
                 How Does "Brain Fog" Show Up In Your Life?
               </h3>
               <p>
@@ -491,14 +496,14 @@ export default function Home_Page() {
               </div>
 
               <div className="text-center py-10">
-                <p className="text-2xl font-light text-gray-400 italic">
+                <p className="text-lg font-light text-gray-400 italic">
                   "If these moments are piling up, they’re probably pointing
                   to something bigger."
                 </p>
               </div>
 
               {/* SECTION: What’s Really Behind These Memory Lapses? */}
-              <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
+              <h3 className="text-xl font-black italic text-[#1a2e2a] pt-12">
                 What’s Really Behind These Memory Lapses?
               </h3>
               <div className="space-y-6 text-gray-700">
@@ -519,7 +524,7 @@ export default function Home_Page() {
                   just slower. The brain does exactly the same thing."
                 </div>
 
-                <h4 className="text-2xl font-black text-[#1a2e2a] mt-8">
+                <h4 className="text-xl font-black text-[#1a2e2a] mt-8">
                   What Science Has Discovered:
                 </h4>
                 <p>
@@ -563,7 +568,7 @@ export default function Home_Page() {
                 </p>
 
                 <div className="bg-slate-50 p-10 rounded-xl border border-slate-200 my-12">
-                  <h4 className="text-xl font-black text-[#1a2e2a] mb-6 uppercase tracking-wider">
+                  <h4 className="text-lg font-black text-[#1a2e2a] mb-6 uppercase tracking-wider">
                     Neural Fatigue Builds Up When:
                   </h4>
                   <div className="space-y-4 text-gray-700">
@@ -607,7 +612,7 @@ export default function Home_Page() {
 
               {/* TRANSITION SECTION: Ok… How Do I Eliminate This "Neural Fatigue"? */}
               <h3
-                className="text-3xl font-black italic text-[#1a2e2a] pt-12"
+                className="text-2xl font-black italic text-[#1a2e2a] pt-12"
                 id="how-it-works"
               >
                 Ok… How Do I Eliminate This “Neural Fatigue”?
@@ -649,7 +654,7 @@ export default function Home_Page() {
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#DFB277] mb-6">
                   INTRODUCING
                 </h4>
-                <h3 className="text-4xl font-black text-[#1a2e2a] mb-6">
+                <h3 className="text-3xl font-black text-[#1a2e2a] mb-6">
                   Axen NeuroFuel®
                 </h3>
                 <p className="text-lg text-gray-500 italic mb-10 leading-relaxed">
@@ -668,7 +673,7 @@ export default function Home_Page() {
               <div className="space-y-20 text-gray-700">
                 {/* POINT 1 */}
                 <div className="space-y-6">
-                  <h4 className="text-2xl font-black text-[#1a2e2a] italic border-b-2 border-[#DFB277] pb-4 inline-block">
+                  <h4 className="text-xl font-black text-[#1a2e2a] italic border-b-2 border-[#DFB277] pb-4 inline-block">
                     1. Axen NeuroFuel® Reactivates Neural Growth Signals
                   </h4>
                   <p className="text-sm font-bold uppercase tracking-widest text-gray-400">
@@ -719,7 +724,7 @@ export default function Home_Page() {
 
                 {/* POINT 2 */}
                 <div className="space-y-6">
-                  <h4 className="text-2xl font-black text-[#1a2e2a] italic border-b-2 border-[#2d5a4c] pb-4 inline-block">
+                  <h4 className="text-xl font-black text-[#1a2e2a] italic border-b-2 border-[#2d5a4c] pb-4 inline-block">
                     2. Axen NeuroFuel® Silences Stress "Alarms"
                   </h4>
                   <p className="text-sm font-bold uppercase tracking-widest text-gray-400">
@@ -774,7 +779,7 @@ export default function Home_Page() {
 
                 {/* POINT 3 */}
                 <div className="space-y-6">
-                  <h4 className="text-2xl font-black text-[#1a2e2a] italic border-b-2 border-emerald-500 pb-4 inline-block">
+                  <h4 className="text-xl font-black text-[#1a2e2a] italic border-b-2 border-emerald-500 pb-4 inline-block">
                     3. Axen NeuroFuel® Sustains Clarity and Focus While
                     Rebuilding Happens
                   </h4>
@@ -830,7 +835,7 @@ export default function Home_Page() {
                 <div className="absolute top-0 right-0 p-8 opacity-10">
                   <AlertTriangle className="w-24 h-24" />
                 </div>
-                <h3 className="text-3xl font-black italic text-[#DFB277] mb-10">
+                <h3 className="text-2xl font-black italic text-[#DFB277] mb-10">
                   Why Most Products Fail
                 </h3>
                 <div className="grid md:grid-cols-2 gap-10 text-gray-200">
@@ -872,7 +877,7 @@ export default function Home_Page() {
               </div>
 
               {/* PROTOCOL SECTION */}
-              <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
+              <h3 className="text-2xl font-black italic text-[#1a2e2a] pt-12">
                 The NeuroRestore™ Protocol
               </h3>
               <p className="mb-10 text-gray-600 leading-relaxed">
@@ -976,7 +981,7 @@ export default function Home_Page() {
               </div>
 
               {/* WEEK BY WEEK - BLOG STYLE */}
-              <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-24 mb-4">
+              <h3 className="text-2xl font-black italic text-[#1a2e2a] pt-24 mb-4">
                 Week by Week: What I Actually Felt
               </h3>
               <p className="text-lg text-gray-500 italic mb-12 border-l-4 border-[#2d5a4c] pl-6 font-medium">
@@ -1116,7 +1121,7 @@ export default function Home_Page() {
 
               {/* TESTIMONIALS SECTION */}
               <div id="reviews" className="pt-20 text-gray-700">
-                <h3 className="text-3xl font-black italic text-[#1a2e2a] mb-6 text-center uppercase tracking-tighter">
+                <h3 className="text-2xl font-black italic text-[#1a2e2a] mb-6 text-center uppercase tracking-tighter">
                   What Others Are Saying
                 </h3>
                 <p className="max-w-2xl mx-auto text-center text-gray-600 mb-12 italic font-medium leading-relaxed px-4">
@@ -1214,7 +1219,7 @@ export default function Home_Page() {
               </div>
 
               {/* HOW TO USE */}
-              <h3 className="text-3xl font-black italic text-[#1a2e2a] pt-12">
+              <h3 className="text-2xl font-black italic text-[#1a2e2a] pt-12">
                 How Do I Use It?
               </h3>
               <p className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-12">
@@ -1365,7 +1370,7 @@ export default function Home_Page() {
                     these are gone, we can't guarantee they'll be back before
                     next month.”
                   </blockquote>
-                  <p className="text-sm opacity-60">
+                  <p className="text-sm opacity-70">
                     For the record: I rarely get messages like this — which is
                     why I'm passing it on.
                   </p>
@@ -1374,7 +1379,7 @@ export default function Home_Page() {
 
               {/* GUARANTEE DETAIL */}
               <div className="my-24 space-y-10 text-gray-700">
-                <h3 className="text-3xl font-black italic text-[#1a2e2a]">
+                <h3 className="text-2xl font-black italic text-[#1a2e2a]">
                   What If I Don't Feel Anything?
                 </h3>
                 <p className="leading-relaxed">
@@ -1413,7 +1418,7 @@ export default function Home_Page() {
           </article>
 
           {/* SIDEBAR (Right Sticky) */}
-          <aside className="w-full lg:w-95 lg:sticky lg:top-28 z-40 order-1 lg:order-2">
+          <aside className="hidden lg:block w-full lg:w-95 lg:sticky lg:top-28 z-40 order-2">
             <ProductSidebarCard />
 
             {/* STOCK WARNING (Right Sidebar) */}
@@ -1447,11 +1452,11 @@ export default function Home_Page() {
             Your Next Step
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-black mb-16 italic leading-tight font-playfair">
+          <h2 className="text-3xl md:text-5xl font-black mb-16 italic leading-tight font-playfair">
             So Does It Make Sense To Try?
           </h2>
 
-          <p className="text-xl md:text-2xl text-white/70 mb-20 font-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/70 mb-20 font-light max-w-3xl mx-auto leading-relaxed">
             Let me ask you this. If just two capsules a day helped you feel
             clearer, calmer, and more focused — without the crash, the
             jitters, or the mental drag — what would your day actually look
@@ -1512,14 +1517,14 @@ export default function Home_Page() {
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#DFB277] text-white px-6 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
                     🔥 Limited Time Offer
                   </div>
-                  <div className="flex items-baseline gap-4 mb-10 mt-4 justify-center">
-                    <span className="text-5xl font-black tracking-tighter">
+                  {/* <div className="flex items-baseline gap-4 mb-10 mt-4 justify-center"> */}
+                  {/* <span className="text-5xl font-black tracking-tighter">
                       $ 178.20
-                    </span>
-                    <span className="text-gray-400 font-bold uppercase tracking-widest text-xs">
+                    </span> */}
+                  {/* <span className="text-gray-400 font-bold uppercase tracking-widest text-xs">
                       / tub
-                    </span>
-                  </div>
+                    </span> */}
+                  {/* </div> */}
                   <button className="w-full bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-7 rounded-xl text-xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95 group uppercase tracking-tight">
                     <span>CHECK AVAILABILITY</span>
                     <span className="text-[10px] opacity-60 font-black">
@@ -1561,7 +1566,7 @@ export default function Home_Page() {
               <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
                 <ShieldCheck className="w-40 h-40 text-[#DFB277]" />
               </div>
-              <h4 className="text-3xl font-black mb-10 italic text-[#DFB277]">
+              <h4 className="text-2xl font-black mb-10 italic text-[#DFB277]">
                 30 Days or Your Money Back
               </h4>
               <p className="opacity-70 text-lg leading-relaxed mb-12 font-light italic text-gray-200">
