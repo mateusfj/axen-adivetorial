@@ -212,7 +212,6 @@
   }
   html,
   :host {
-    overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
     line-height: 1.5;
@@ -1860,6 +1859,9 @@
     .lg\:text-7xl {
       font-size: var(--text-7xl);
       line-height: var(--tw-leading, var(--text-7xl--line-height));
+    }
+    .lg\:items-start {
+      align-items: flex-start;
     }
   }
 }
