@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /advetorial/
+  
+  # Redireciona para garantir a barra no final (trailing slash) se necessário
+  # (O Next.js já cuida da maioria disso com trailingSlash: true)
+  
+  # Se o arquivo existir, serve ele normalmente
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule . - [L]
+
+  # Caso contrário, tenta servir o arquivo .html correspondente
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>

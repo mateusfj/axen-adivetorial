@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Axen NeuroFuel - Clear Your Brain Fog",
   description: "Axen NeuroFuel - Clear Your Brain Fog",
   icons: {
-    icon: "/images/favicon.png",
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/favicon.png`,
   },
 };
 

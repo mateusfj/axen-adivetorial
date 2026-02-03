@@ -24,15 +24,17 @@ import {
   Gift,
 } from "lucide-react";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 // --- Shared Components ---
 
 const Navbar: React.FC = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-3 px-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="/" className="flex items-center gap-2">
+        <a href={`${BASE_PATH}/`} className="flex items-center gap-2">
           <img
-            src="/images/logo.png"
+            src={`${BASE_PATH}/images/logo.png`}
             alt="Axen Logo"
             className="h-8 md:h-10 w-auto"
           />
@@ -67,9 +69,9 @@ const ProductSidebarCard: React.FC = () => (
     <div className="absolute top-0 right-0 bg-[#DFB277] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-bl-xl z-10">
       Best Seller
     </div>
-    <div className="relative overflow-hidden rounded-xl mb-6 aspect-square bg-[#fdfbf7]">
+    <div className="relative  rounded-xl mb-6 aspect-square bg-[#fdfbf7]">
       <img
-        src="/images/product.png"
+        src={`${BASE_PATH}/images/product.png`}
         alt="Axen NeuroFuel Tub"
         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 p-4"
       />
@@ -147,7 +149,7 @@ export default function Home_Page() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]">
+    <div className="min-h-screen  text-[#1a2e2a] selection:bg-[#DFB277]/30 selection:text-[#1a2e2a]">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-4 py-8 md:py-12">
@@ -177,7 +179,7 @@ export default function Home_Page() {
               {/* Main Sarah Image - Hero Lifestyle Holding Tub */}
               <div className="relative mb-12 group overflow-hidden rounded-xl">
                 <img
-                  src="/images/woman-hold-product.png"
+                  src={`${BASE_PATH}/images/woman-hold-product.png`}
                   alt="Sarah Mitchell holding Axen NeuroFuel tub"
                   className="w-full object-cover aspect-4/3 group-hover:scale-105 transition-transform duration-1000"
                 />
@@ -195,7 +197,7 @@ export default function Home_Page() {
               <div className="flex items-center gap-5 border-t border-b border-gray-100 py-8 mb-16">
                 <div className="w-16 h-16 rounded-xl border-2 border-[#DFB277] overflow-hidden shrink-0">
                   <img
-                    src="/images/woman-icon.png"
+                    src={`${BASE_PATH}/images/woman-icon.png`}
                     alt="Sarah Mitchell Portrait Bio"
                     className="w-full h-full object-cover"
                   />
@@ -374,7 +376,7 @@ export default function Home_Page() {
 
               <div className="relative rounded-xl overflow-hidden mb-12 border-4 border-white">
                 <img
-                  src="/images/mental-fog-senior.jpg"
+                  src={`${BASE_PATH}/images/mental-fog-senior.jpg`}
                   alt="Senior forgetting something"
                   className="w-full object-cover aspect-video grayscale contrast-125"
                 />
@@ -656,7 +658,7 @@ export default function Home_Page() {
                   simple daily ritual.
                 </p>
                 <img
-                  src="/images/product.png"
+                  src={`${BASE_PATH}/images/product.png`}
                   alt="Axen NeuroFuel tub with powder around it"
                   className="w-full rounded-xl mb-10 border border-gray-100 object-contain"
                 />
@@ -1436,10 +1438,10 @@ export default function Home_Page() {
             </div>
           </aside>
         </div>
-      </main>
+      </main >
 
       {/* FINAL OFFER SECTION */}
-      <section id="cta" className="bg-[#1a2e2a] py-32 px-4 text-white">
+      < section id="cta" className="bg-[#1a2e2a] py-32 px-4 text-white" >
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block bg-[#DFB277] text-[#1a2e2a] px-8 py-3 rounded-xl font-black text-xs uppercase tracking-[0.4em] mb-12">
             Your Next Step
@@ -1464,7 +1466,7 @@ export default function Home_Page() {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-[#2d5a4c]/10 blur-3xl rounded-xl"></div>
                   <img
-                    src="/images/product.png"
+                    src={`${BASE_PATH}/images/product.png`}
                     alt="Final Product Presentation"
                     className="w-full rounded-xl relative z-10 transition-transform duration-700 hover:scale-[1.02] object-contain"
                   />
@@ -1551,10 +1553,10 @@ export default function Home_Page() {
                 </div>
               </div>
             </div>
-          </div>
+          </div >
 
           {/* GUARANTEE BOX */}
-          <div className="mt-32 max-w-3xl mx-auto">
+          < div className="mt-32 max-w-3xl mx-auto" >
             <div className="bg-white/5 border border-white/10 p-16 rounded-xl backdrop-blur-xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
                 <ShieldCheck className="w-40 h-40 text-[#DFB277]" />
@@ -1575,8 +1577,8 @@ export default function Home_Page() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+          </div >
+        </div >
       </section >
 
       {/* FOOTER */}
@@ -1584,7 +1586,7 @@ export default function Home_Page() {
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="flex items-center justify-center gap-3">
             <img
-              src="/images/logo.png"
+              src={`${BASE_PATH}/images/logo.png`}
               alt="Axen Logo"
               className="h-12 md:h-14 w-auto brightness-0 invert"
             />
