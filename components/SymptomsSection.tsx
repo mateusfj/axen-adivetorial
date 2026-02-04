@@ -53,11 +53,14 @@ export const SymptomsSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="text-center py-10">
-        <p className="text-lg font-light text-gray-400 italic">
-          "If these moments are piling up, they’re probably pointing to
-          something bigger."
-        </p>
+      <div className="my-16 bg-[#1a2e2a] p-10 rounded-xl relative overflow-hidden text-center group">
+        <div className="absolute inset-0 bg-[#DFB277] opacity-0 group-hover:opacity-5 transition-opacity duration-700"></div>
+        <div className="relative z-10">
+          <p className="text-xl md:text-2xl font-black text-[#DFB277] italic leading-relaxed">
+            "If clearly recognizable moments like these are piling up, they’re
+            probably pointing to something bigger."
+          </p>
+        </div>
       </div>
     </>
   );

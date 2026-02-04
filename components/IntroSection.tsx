@@ -38,7 +38,7 @@ export const IntroSection: React.FC = () => {
       </div>
 
       <p>So many viral wellness products follow the same script:</p>
-      <div className=" text-red-600 p-4 rounded-xl font-black text-center uppercase tracking-widest text-sm border border-red-100">
+      <div className="bg-red-50 text-red-700 p-4 rounded-xl font-black text-center uppercase tracking-widest text-sm border border-red-100 shadow-sm relative overflow-hidden">
         Huge Promises → Tiny Dose → Pretty Label → Zero Results
       </div>
 
@@ -71,15 +71,30 @@ export const IntroSection: React.FC = () => {
         got this:
       </p>
 
-      <div className="grid md:grid-cols-1 gap-4 text-gray-700">
-        <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
-          "The results were stronger than I expected."
+      <div className="grid md:grid-cols-1 gap-6 text-gray-700 mt-8 mb-12">
+        <div className="bg-white p-8 rounded-xl border border-gray-200 border-l-4 border-l-[#2d5a4c] shadow-lg shadow-black/5 relative hover:-translate-y-1 transition-transform duration-300">
+          <div className="absolute -top-3 left-6 px-3 py-1 bg-[#2d5a4c] text-white text-[10px] uppercase font-black tracking-widest rounded-full">
+            Verified Expert
+          </div>
+          <p className="italic text-lg font-medium text-[#1a2e2a] leading-relaxed">
+            "The results were stronger than I expected."
+          </p>
         </div>
-        <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
-          "It outperformed every 'serious' supplement I've tested this year."
+        <div className="bg-white p-8 rounded-xl border border-gray-200 border-l-4 border-l-[#DFB277] shadow-lg shadow-black/5 relative hover:-translate-y-1 transition-transform duration-300 ml-0 md:ml-8">
+          <div className="absolute -top-3 left-6 px-3 py-1 bg-[#DFB277] text-white text-[10px] uppercase font-black tracking-widest rounded-full">
+            Clinical Review
+          </div>
+          <p className="italic text-lg font-medium text-[#1a2e2a] leading-relaxed">
+            "It outperformed every 'serious' supplement I've tested this year."
+          </p>
         </div>
-        <div className="bg-slate-50 p-6 rounded-xl italic text-sm border border-slate-200 border-l-4 border-l-[#2d5a4c]">
-          "It was the last thing I thought would help my clients… and it did."
+        <div className="bg-white p-8 rounded-xl border border-gray-200 border-l-4 border-l-[#1a2e2a] shadow-lg shadow-black/5 relative hover:-translate-y-1 transition-transform duration-300 ml-0 md:ml-16">
+          <div className="absolute -top-3 left-6 px-3 py-1 bg-[#1a2e2a] text-white text-[10px] uppercase font-black tracking-widest rounded-full">
+            Patient Feedback
+          </div>
+          <p className="italic text-lg font-medium text-[#1a2e2a] leading-relaxed">
+            "It was the last thing I thought would help my clients… and it did."
+          </p>
         </div>
       </div>
     </>

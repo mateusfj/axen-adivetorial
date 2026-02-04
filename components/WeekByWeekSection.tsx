@@ -112,27 +112,23 @@ export const WeekByWeekSection: React.FC = () => {
               By Week 4, I experience results similar to those reported in the
               studies:
             </p>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-4 group">
-                <div className="w-10 h-10 bg-[#DFB277]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#DFB277]/20 transition-colors">
-                  <Heart className="w-5 h-5 text-[#DFB277]" />
-                </div>
-                <p className="text-sm font-bold italic">
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <CheckCircle className="text-[#DFB277] w-5 h-5 shrink-0 mt-0.5" />
+                <span>
                   My husband says I seem “less fried” and more present
-                </p>
+                </span>
               </li>
-              <li className="flex items-center gap-4 group">
-                <div className="w-10 h-10 bg-[#DFB277]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#DFB277]/20 transition-colors">
-                  <Quote className="w-5 h-5 text-[#DFB277]" />
-                </div>
-                <p className="text-sm font-bold italic">
+              <li className="flex items-start gap-3 text-sm font-bold italic bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <CheckCircle className="text-[#DFB277] w-5 h-5 shrink-0 mt-0.5" />
+                <span>
                   At dinner with friends, I feel like the funny person again
-                </p>
+                </span>
               </li>
             </ul>
-            <p className="text-center py-6 bg-slate-50 rounded-xl border border-slate-100 text-lg font-black text-[#1a2e2a] italic">
+            <div className="text-center py-6 bg-[#DFB277]/10 rounded-xl border border-[#DFB277]/20 text-lg font-black text-[#1a2e2a] italic mt-6">
               "It's not a personality transplant. It's just me, but clearer."
-            </p>
+            </div>
           </div>
         </div>
       </div>

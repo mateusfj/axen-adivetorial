@@ -31,21 +31,21 @@ export const ScienceSection: React.FC = () => {
         <p>
           Studies show that after age 40, our brain progressively reduces the
           production of a protein called{" "}
-          <strong>NGF — Nerve Growth Factor</strong>.
+          <strong>NGF — The Nerve Growth Factor</strong>.
         </p>
 
         <p>NGF is the biological signal responsible for:</p>
-        <ul className="space-y-3 font-medium text-gray-700">
+        <ul className="space-y-4 font-bold text-gray-700 text-lg">
           <li className="flex items-center gap-3">
-            <CheckCircle className="text-green-500 w-5 h-5 shrink-0" /> Keeping
+            <CheckCircle className="text-green-600 w-6 h-6 shrink-0" /> Keeping
             neurons alive
           </li>
           <li className="flex items-center gap-3">
-            <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />{" "}
+            <CheckCircle className="text-green-600 w-6 h-6 shrink-0" />{" "}
             Preserving neural connections
           </li>
           <li className="flex items-center gap-3">
-            <CheckCircle className="text-green-500 w-5 h-5 shrink-0" /> Allowing
+            <CheckCircle className="text-green-600 w-6 h-6 shrink-0" /> Allowing
             the brain to form new synapses
           </li>
         </ul>
@@ -65,32 +65,43 @@ export const ScienceSection: React.FC = () => {
           safe to invest in performance.
         </p>
 
-        <div className="bg-slate-50 p-10 rounded-xl border border-slate-200 my-12">
-          <h4 className="text-lg font-black text-[#1a2e2a] mb-6 uppercase tracking-wider">
+        <div className="bg-[#1a2e2a] text-white p-10 rounded-xl border border-[#2d5a4c] shadow-xl my-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-10 opacity-5">
+            <XCircle className="w-64 h-64 text-red-500" />
+          </div>
+          <h4 className="text-xl font-black text-[#DFB277] mb-8 uppercase tracking-widest relative z-10">
             Neural Fatigue Builds Up When:
           </h4>
-          <div className="space-y-4 text-gray-700">
+          <div className="space-y-6 relative z-10">
             <div className="flex items-start gap-4">
-              <XCircle className="text-red-500 w-6 h-6 shrink-0" />
-              <span className="text-sm font-bold leading-relaxed">
+              <div className="bg-red-500/20 p-2 rounded-lg">
+                <XCircle className="text-red-400 w-6 h-6 shrink-0" />
+              </div>
+              <span className="text-lg font-bold leading-tight opacity-90">
                 Stress hormones stay elevated all day
               </span>
             </div>
             <div className="flex items-start gap-4">
-              <XCircle className="text-red-500 w-6 h-6 shrink-0" />
-              <span className="text-sm font-bold leading-relaxed">
+              <div className="bg-red-500/20 p-2 rounded-lg">
+                <XCircle className="text-red-400 w-6 h-6 shrink-0" />
+              </div>
+              <span className="text-lg font-bold leading-tight opacity-90">
                 Unfinished tasks buzz in the back of your mind
               </span>
             </div>
             <div className="flex items-start gap-4">
-              <XCircle className="text-red-500 w-6 h-6 shrink-0" />
-              <span className="text-sm font-bold leading-relaxed">
+              <div className="bg-red-500/20 p-2 rounded-lg">
+                <XCircle className="text-red-400 w-6 h-6 shrink-0" />
+              </div>
+              <span className="text-lg font-bold leading-tight opacity-90">
                 Your gut and immune system send the "wrong" signals
               </span>
             </div>
             <div className="flex items-start gap-4">
-              <XCircle className="text-red-500 w-6 h-6 shrink-0" />
-              <span className="text-sm font-bold leading-relaxed">
+              <div className="bg-red-500/20 p-2 rounded-lg">
+                <XCircle className="text-red-400 w-6 h-6 shrink-0" />
+              </div>
+              <span className="text-lg font-bold leading-tight opacity-90">
                 Digital devices pull your brain away from focus
               </span>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { AlertTriangle, CheckCircle } from "lucide-react";
+import { AlertTriangle, CheckCircle, X } from "lucide-react";
 
 export const ComparisonSection: React.FC = () => {
   return (
@@ -15,11 +15,19 @@ export const ComparisonSection: React.FC = () => {
           <h4 className="font-black text-red-400 uppercase tracking-widest text-xs">
             ❌ Most Brands Use:
           </h4>
-          <ul className="space-y-4 text-xs font-bold opacity-60">
-            <li>• Low dose powders</li>
-            <li>• Mycelium grown on grain (starch)</li>
-            <li>• Toxic alcohol-based extraction</li>
-            <li>• Generic vitamin forms</li>
+          <ul className="space-y-4 text-xs font-bold text-gray-300">
+            <li className="flex items-center gap-3">
+              <X className="w-4 h-4 text-red-500 shrink-0" /> Low dose powders
+            </li>
+            <li className="flex items-center gap-3">
+              <X className="w-4 h-4 text-red-500 shrink-0" /> Mycelium grown on grain (starch)
+            </li>
+            <li className="flex items-center gap-3">
+              <X className="w-4 h-4 text-red-500 shrink-0" /> Toxic alcohol-based extraction
+            </li>
+            <li className="flex items-center gap-3">
+              <X className="w-4 h-4 text-red-500 shrink-0" /> Generic vitamin forms
+            </li>
           </ul>
         </div>
         <div className="space-y-6">
@@ -27,19 +35,19 @@ export const ComparisonSection: React.FC = () => {
             ✅ Axen NeuroFuel® Delivers:
           </h4>
           <ul className="space-y-4 text-xs font-bold">
-            <li className="flex gap-2">
+            <li className="flex items-center gap-3">
               <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
               Clinical dose per serving
             </li>
-            <li className="flex gap-2">
+            <li className="flex items-center gap-3">
               <CheckCircle className="w-4 h-4 text-green-400 shrink-0" /> 6
               synergistic ingredients
             </li>
-            <li className="flex gap-2">
+            <li className="flex items-center gap-3">
               <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
               Fruiting body extracts
             </li>
-            <li className="flex gap-2">
+            <li className="flex items-center gap-3">
               <CheckCircle className="w-4 h-4 text-green-400 shrink-0" /> Active
               vitamin forms
             </li>
