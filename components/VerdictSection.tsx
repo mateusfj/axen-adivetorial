@@ -39,7 +39,7 @@ export const VerdictSection: React.FC = () => {
         Availability issues."
       </p>
 
-      <div className="mt-12 bg-[#1a2e2a] text-white p-10 rounded-xl text-left relative overflow-hidden">
+      <div className="mt-12 bg-black text-white p-10 rounded-xl text-left relative overflow-hidden">
         <div className="absolute top-0 right-0 p-8 opacity-5">
           <Brain className="w-24 h-24" />
         </div>

@@ -22,7 +22,7 @@ export const WhatYouGetSection: React.FC = () => {
             key={i}
             className="flex items-center gap-4 bg-slate-50 p-6 rounded-xl border border-slate-200 font-bold"
           >
-            <CheckCircle className="w-6 h-6 text-green-500 shrink-0" /> {it}
+            <CheckCircle className="w-6 h-6 text-[#55C478] shrink-0" /> {it}
           </div>
         ))}
       </div>

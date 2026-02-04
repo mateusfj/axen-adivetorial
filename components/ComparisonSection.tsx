@@ -3,7 +3,7 @@ import { AlertTriangle, CheckCircle, X } from "lucide-react";
 
 export const ComparisonSection: React.FC = () => {
   return (
-    <div className="my-24 bg-[#1a2e2a] text-white p-12 rounded-xl relative overflow-hidden">
+    <div className="my-24 bg-black text-white p-12 rounded-xl relative overflow-hidden">
       <div className="absolute top-0 right-0 p-8 opacity-10">
         <AlertTriangle className="w-24 h-24" />
       </div>
@@ -31,24 +31,24 @@ export const ComparisonSection: React.FC = () => {
           </ul>
         </div>
         <div className="space-y-6">
-          <h4 className="font-black text-green-400 uppercase tracking-widest text-xs">
+          <h4 className="font-black text-[#55C478] uppercase tracking-widest text-xs">
             ✅ Axen NeuroFuel® Delivers:
           </h4>
           <ul className="space-y-4 text-xs font-bold">
             <li className="flex items-center gap-3">
-              <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
+              <CheckCircle className="w-4 h-4 text-[#55C478] shrink-0" />{" "}
               Clinical dose per serving
             </li>
             <li className="flex items-center gap-3">
-              <CheckCircle className="w-4 h-4 text-green-400 shrink-0" /> 6
+              <CheckCircle className="w-4 h-4 text-[#55C478] shrink-0" /> 6
               synergistic ingredients
             </li>
             <li className="flex items-center gap-3">
-              <CheckCircle className="w-4 h-4 text-green-400 shrink-0" />{" "}
+              <CheckCircle className="w-4 h-4 text-[#55C478] shrink-0" />{" "}
               Fruiting body extracts
             </li>
             <li className="flex items-center gap-3">
-              <CheckCircle className="w-4 h-4 text-green-400 shrink-0" /> Active
+              <CheckCircle className="w-4 h-4 text-[#55C478] shrink-0" /> Active
               vitamin forms
             </li>
           </ul>

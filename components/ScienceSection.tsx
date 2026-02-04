@@ -37,15 +37,15 @@ export const ScienceSection: React.FC = () => {
         <p>NGF is the biological signal responsible for:</p>
         <ul className="space-y-4 font-bold text-gray-700 text-lg">
           <li className="flex items-center gap-3">
-            <CheckCircle className="text-green-600 w-6 h-6 shrink-0" /> Keeping
+            <CheckCircle className="text-[#55C478] w-6 h-6 shrink-0" /> Keeping
             neurons alive
           </li>
           <li className="flex items-center gap-3">
-            <CheckCircle className="text-green-600 w-6 h-6 shrink-0" />{" "}
+            <CheckCircle className="text-[#55C478] w-6 h-6 shrink-0" />{" "}
             Preserving neural connections
           </li>
           <li className="flex items-center gap-3">
-            <CheckCircle className="text-green-600 w-6 h-6 shrink-0" /> Allowing
+            <CheckCircle className="text-[#55C478] w-6 h-6 shrink-0" /> Allowing
             the brain to form new synapses
           </li>
         </ul>
@@ -65,7 +65,7 @@ export const ScienceSection: React.FC = () => {
           safe to invest in performance.
         </p>
 
-        <div className="bg-[#1a2e2a] text-white p-10 rounded-xl border border-[#2d5a4c] shadow-xl my-16 relative overflow-hidden">
+        <div className="bg-[#2E2E2E] text-white p-10 rounded-xl border border-[#2d5a4c] shadow-xl my-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 p-10 opacity-5">
             <XCircle className="w-64 h-64 text-red-500" />
           </div>

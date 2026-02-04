@@ -65,7 +65,7 @@ export const HowToUseSection: React.FC = () => {
                   key={i}
                   className="flex items-center gap-3 text-xs font-bold text-gray-700"
                 >
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
+                  <CheckCircle className="w-4 h-4 text-[#55C478] shrink-0" />{" "}
                   {gain}
                 </li>
               ))}

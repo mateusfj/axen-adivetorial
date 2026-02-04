@@ -6,7 +6,7 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const FinalOfferSection: React.FC = () => {
   return (
-    <section id="cta" className="bg-[#1a2e2a] py-32 px-4 text-white">
+    <section id="cta" className="bg-[#2E2E2E] py-32 px-4 text-white">
       <div className="max-w-5xl mx-auto text-center">
         <div className="inline-block bg-[#DFB277] text-[#1a2e2a] px-8 py-3 rounded-xl font-black text-xs uppercase tracking-[0.4em] mb-12">
           Your Next Step
@@ -73,13 +73,13 @@ export const FinalOfferSection: React.FC = () => {
                 ))}
               </div>
 
-              <div className="bg-[#fdfbf7] p-10 rounded-xl border-2 border-[#DFB277]/20 relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#DFB277] text-white px-6 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
+              <div className="bg-[#fdfbf7] p-10 rounded-xl border-2 border-[#55C478]/20 relative">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#55C478] text-white px-6 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg shadow-[#55C478]/20">
                   🔥 Limited Time Offer
                 </div>
-                <button className="w-full bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-7 rounded-xl text-xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95 group uppercase tracking-tight">
+                <button className="w-full bg-[#55C478] hover:bg-black text-white font-black py-7 rounded-xl text-xl flex flex-col items-center justify-center gap-1 transition-all active:scale-95 group uppercase tracking-tight shadow-2xl shadow-[#55C478]/30">
                   <span>CHECK AVAILABILITY</span>
-                  <span className="text-[10px] opacity-60 font-black">
+                  <span className="text-[10px] opacity-80 font-black">
                     Check stock now →
                   </span>
                 </button>

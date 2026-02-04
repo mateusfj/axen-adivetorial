@@ -108,7 +108,7 @@ export const ProtocolSection: React.FC = () => {
       </div>
 
       {/* FINAL SUMMARY RECAP */}
-      <div className="bg-[#1a2e2a] text-white p-10 rounded-xl space-y-6">
+      <div className="bg-black text-white p-10 rounded-xl space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm italic font-medium opacity-90 leading-relaxed">
           <p>Signal™ reactivates neural growth factors.</p>
           <p>Shield™ protects against the corrosion of modern stress.</p>

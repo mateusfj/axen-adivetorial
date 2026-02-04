@@ -59,8 +59,8 @@ export const TestimonialsSection: React.FC = () => {
                   </span>
                 )}
               </p>
-              <div className="flex items-center gap-1.5 text-[10px] text-green-600 font-black uppercase tracking-[0.2em] bg-green-50 px-3 py-1 rounded-xl border border-green-100 self-start md:self-auto">
-                <div className="bg-green-600 p-0.5 rounded-xl">
+              <div className="flex items-center gap-1.5 text-[10px] text-[#55C478] font-black uppercase tracking-[0.2em] bg-[#55C478]/10 px-3 py-1 rounded-xl border border-[#55C478]/20 self-start md:self-auto">
+                <div className="bg-[#55C478] p-0.5 rounded-xl">
                   <CheckCircle className="w-2.5 h-2.5 text-white" />
                 </div>
                 Verified Customer

@@ -28,9 +28,9 @@ export const Navbar: React.FC = () => {
           </a>
           <a
             href="#cta"
-            className="bg-[#2d5a4c] text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-[#1a2e2a] transition-all active:scale-95"
+            className="bg-[#55C478] hover:bg-black text-white px-6 py-2 rounded-xl font-black uppercase text-xs tracking-widest transition-all shadow-lg shadow-[#55C478]/20"
           >
-            CHECK AVAILABILITY
+            Check Availability
           </a>
         </div>
       </div>

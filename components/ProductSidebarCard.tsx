@@ -39,7 +39,7 @@ export const ProductSidebarCard: React.FC = () => (
       </div>
       <a
         href="#cta"
-        className="block text-center bg-[#2d5a4c] hover:bg-[#1a2e2a] text-white font-black py-5 rounded-xl transition-all text-lg uppercase tracking-tight"
+        className="block text-center bg-[#55C478] hover:bg-black text-white font-black py-5 rounded-xl transition-all text-lg uppercase tracking-tight shadow-xl shadow-[#55C478]/20"
       >
         ORDER NOW
       </a>

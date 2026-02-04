@@ -4,7 +4,7 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#111] text-white/30 py-24 px-4 text-center">
+    <footer className="bg-black text-white/30 py-24 px-4 text-center">
       <div className="max-w-6xl mx-auto space-y-16">
         <div className="flex items-center justify-center gap-3">
           <img
